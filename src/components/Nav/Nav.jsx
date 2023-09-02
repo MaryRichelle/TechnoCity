@@ -1,11 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useContext } from 'react'
+import { styled, css } from 'styled-components'
 import { Link } from "react-router-dom"
-
+import { OffersData } from "../context/OffersContext";
+import { OfferTextKeyframes } from "../styles/Keyframes";
+import { media } from '../styles/MediaQueries';
 
 const NavBar = styled.div`
- background:#232222;  
-
+ background:#232222; 
 color:#fbfbfc ;
 display: flex;
 justify-content: space-around ;
@@ -15,43 +16,52 @@ height:5rem;
 `
 const LinksContainer = styled.ul`
 display: flex;
-justify-content: center;
+justify-content: space-around;
 align-items:center;
 color:#fbfbfc ;
+column-gap :1rem;
+ ${media.desktopMd(css`
+column-gap :2rem;
+  `)}
 `
 
 const StyledLink = styled(Link)`
 text-decoration: none;
-font-size:1.2rem;
-padding: 1rem;
+font-size:.9rem;
+// padding: 1rem;
 color:#fbfbfc ;
 
 &:active{
   background: white;
- transform: skewX( -25deg);
-  border-bottom:3px solid tomato;
+  transform: skewX( -25deg);
+  border-bottom:3px solid #ff6347;
 }
   &:hover {
-  color: tomato;
+  color: #ff6347;
 }
+ ${media.desktopMd(css`
+font-size:1.2rem;
+  `)}
 `
+
 const OffersText = styled.p`
-font-family: 'Poppins', sans-serif;
+width: auto;
+animation:${OfferTextKeyframes} 7s linear infinite;
 `
 
 
 function Nav() {
-
+  const { offer } = useContext(OffersData);
   return (
 
     <NavBar>
-      <OffersText> free shipping on your first order</OffersText>
+      <OffersText>Receive a 5% discount when purchasing 3 products  {offer}</OffersText>
       <LinksContainer>
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/smartphones">Smart Phones</StyledLink>
         <StyledLink to="/smartwatches">Smart watches</StyledLink>
-        <StyledLink to="/laptops">Laptops</StyledLink>
-        <StyledLink to="/electronicAppliances">Electronic Appliances</StyledLink>
+        <StyledLink to="/laptops">PC and Laptops</StyledLink>
+        <StyledLink to="/electronicAppliances">Home Appliances</StyledLink>
       </LinksContainer>
 
     </NavBar>

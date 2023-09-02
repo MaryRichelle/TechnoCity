@@ -11,14 +11,12 @@ flex-gap: 2rem;
 
 `
 const AllProducts = styled.div`
-display: flex;
+display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 gap:4rem;
 width: 90%;
 margin:auto;
-flex-direction:row;
-justify-content: space=around;
-align-items:center;
-flex-wrap:wrap;
+
 `
 function Home() {
   const { products } = useContext(CartContext)

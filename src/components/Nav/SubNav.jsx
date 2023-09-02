@@ -12,7 +12,7 @@ display: flex;
 justify-content: space-between;
 align-items:center;
 padding-inline: 8rem;
-height:5rem;
+height:4rem;
 position:sticky;
 top:0;
 z-index:4;
@@ -60,12 +60,16 @@ color: #fff;
 &:focus{
 border: none;
 outline: none;
+
 }
 
 `
 const SearchIcon = styled(FaSearch)`
 margin-inline:4px;
 cursor:pointer;
+&:hover{
+color: #ff6347;
+}
 `
 const ShoppingCartSpan = styled.span`
 display: inline-block;

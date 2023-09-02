@@ -4,12 +4,16 @@ import "./index.css"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Context from './components/context/CartContext';
+import OffersContext from "./components/context/OffersContext"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Context>
+      <OffersContext>
       <App />
+      </OffersContext>
     </Context>
+    
   </React.StrictMode>
 );
 
