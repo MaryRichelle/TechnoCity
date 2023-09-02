@@ -1,10 +1,11 @@
 import { BrowserRouter as Router } from 'react-router-dom';
+import { styled } from 'styled-components';
 import AppRoutes from "./components/AppRoutes"
 import Nav from './components/Nav/Nav';
-
-import Footer from './components/footer/Footer';
 import SubNav from './components/Nav/SubNav';
-import { styled } from 'styled-components';
+import Categories from './components/Categories';
+import BottomCarousel from "./components/BottomCarousel"
+import Footer from './components/footer/Footer';
 const MainApp = styled.main`
 display:flex;
 flex-direction: column;
@@ -20,8 +21,9 @@ function App() {
         <Nav />
         <SubNav />
         <AppRoutes/>
+        <BottomCarousel/>
+        <Categories/>
         <Footer />
-
       </MainApp>
     </Router>
   );

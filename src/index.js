@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom/client';
 import "./index.css"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Context from './components/context/CartContext';
-import OffersContext from "./components/context/OffersContext"
+import Context from './context/CartContext';
+import OffersContext from "./context/OffersContext"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Context>
-      <OffersContext>
-      <App />
-      </OffersContext>
-    </Context>
-    
+    <OffersContext>
+      <Context>
+        <App />
+      </Context>
+    </OffersContext>
+
   </React.StrictMode>
 );
 

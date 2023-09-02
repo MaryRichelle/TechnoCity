@@ -24,9 +24,16 @@ justify-content: space-between;
 const Images = styled.img`
 max-width: 250px;
 height: 250px;
-object-fit: fill;`
+object-fit: fill;
+&:hover{
+      transform: scaleX(-1);
+    }
+
+`
+
+
 const CartBtn = styled.button`
- background: #d1cfcf;
+ background: #e5e3e3;
 border: none;
 padding: 1rem;
 width: 95%;
@@ -41,7 +48,6 @@ color: #fff}
 `
 function Product({ product }) {
   const { cart, setCart } = useContext(CartContext)
-
   const { title, price, image, id } = product;
   return (
     <>

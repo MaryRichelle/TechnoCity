@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 import { FaShoppingCart } from "react-icons/fa"
 import { FaSearch } from "react-icons/fa"
 import { RxAvatar } from "react-icons/rx"

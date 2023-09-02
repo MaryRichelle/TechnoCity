@@ -1,9 +1,9 @@
 import React from 'react'
-import { styled,css } from 'styled-components'
+import { styled, css } from 'styled-components'
 import About from "./About"
 import Contact from "./Contact"
 import NewsLetter from "./NewsLetter"
-import { media } from '../styles/MediaQueries';
+import { media } from '../../styles/MediaQueries';
 
 const Container = styled.section`
   flex-grow: 2;
@@ -24,9 +24,9 @@ const Container = styled.section`
 function Middle() {
   return (
     <Container>
-      <About/>
-      <NewsLetter/>
-      <Contact/>
+      <About />
+      <NewsLetter />
+      <Contact />
     </Container>
   )
 }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { styled, css } from 'styled-components'
-import { headerCarousel as images } from "../data/carousel_images"
+import { headerCarousel as images } from "../../data/carousel_images"
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai"
-import { OffersData } from "../context/OffersContext";
+import { OffersData } from "../../context/OffersContext";
 import { useNavigate } from 'react-router-dom';
-import { media } from '../styles/MediaQueries';
+import { media } from '../../styles/MediaQueries';
 
 const Container = styled.section`
     width: 100vw;
@@ -26,11 +26,14 @@ const CarouselImages = styled.img`
     height: 60vh;
     width: 50%;
     object-fit: fit;
+    &:hover{
+      transform: scaleX(-1);
+    }
   ${media.desktopMd(css`
     height: 75vh;
   `)}
     ${media.mobile(css`
-    height: 50vh;
+    height: 70vh;
     width: 100%;
   
     `)}
@@ -130,7 +133,7 @@ function Carousel() {
       <ArrowLeft onClick={handleLeftClick}><AiOutlineArrowLeft /></ArrowLeft>
       <ArrowRight onClick={handleNextClick}><AiOutlineArrowRight /></ArrowRight>
       {
-        images.map((image, index) => currentImage === index && <CarouselImages key={image} src={image}
+        images.map((image, index) => currentImage === index && <CarouselImages key={image} src={image.image}
           alt="A image of Electronic Appliances " loading="lazy" />)
       }
       <RightTextContainer>

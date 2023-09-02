@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { styled, css } from 'styled-components'
 import { Link } from "react-router-dom"
-import { OffersData } from "../context/OffersContext";
-import { OfferTextKeyframes } from "../styles/Keyframes";
-import { media } from '../styles/MediaQueries';
+import { OffersData } from "../..//context/OffersContext";
+import { OfferTextKeyframes } from "../../styles/Keyframes";
+import { media } from '../../styles/MediaQueries';
 
 const NavBar = styled.div`
  background:#232222; 

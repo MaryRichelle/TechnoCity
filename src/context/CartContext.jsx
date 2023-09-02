@@ -28,7 +28,7 @@ function Context({ children }) {
 
     getData();
   }, []);
-
+// console.log(products);
 
   const value = {
     cart, 
