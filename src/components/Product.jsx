@@ -11,8 +11,7 @@ align-items: center;
 justify-content: space-around;
 gap:2rem;
 font-size:1em;
-//  background: #e8e8e6;
- padding:1rem;
+ padding-inline:.5rem;
 
 `
 const Description = styled.article`
@@ -22,11 +21,12 @@ width: 100%;
 justify-content: space-between;
 `
 const Images = styled.img`
-max-width: 250px;
-height: 250px;
+max-width: 180px;
+height: 180px;
 object-fit: fill;
 &:hover{
-      transform: scaleX(-1);
+    transform: scaleX(-1);
+    transition: transform 0.5s ease-in-out ;
     }
 
 `
@@ -35,16 +35,18 @@ object-fit: fill;
 const CartBtn = styled.button`
  background: #e5e3e3;
 border: none;
-padding: 1rem;
-width: 95%;
+padding: 0.8rem;
+width: 60%;
 border-radius:4px;
 cursor:pointer;
 font-weight: bold;
 color:#080808 ;
 font-size:1em;
-
+transform: skewX(-10deg);
+transition: all 1s ease-in-out;
 &:hover{
-color: #fff}
+background: #ababab;
+color: #fcfaf9}
 `
 function Product({ product }) {
   const { cart, setCart } = useContext(CartContext)

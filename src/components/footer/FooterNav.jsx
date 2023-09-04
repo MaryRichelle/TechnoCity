@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Link } from "react-router-dom"
-
+import {styled ,css} from 'styled-components'
+import { Link } from "react-router-dom";
+import {media} from "../../styles/MediaQueries"
 
 const NavBar = styled.div`
 background:#232222;  
@@ -16,7 +16,9 @@ display: flex;
 justify-content: center;
 align-items:center;
 color:#fbfbfc ;
-
+${media.tablet(css`
+display:none;
+`)}
 `
 
 const StyledLink = styled(Link)`

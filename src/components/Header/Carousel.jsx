@@ -28,6 +28,7 @@ const CarouselImages = styled.img`
     object-fit: fit;
     &:hover{
       transform: scaleX(-1);
+      transition: transform 1s ease-in-out;
     }
   ${media.desktopMd(css`
     height: 75vh;
@@ -39,13 +40,12 @@ const CarouselImages = styled.img`
     `)}
 `
 const ArrowLeft = styled.div`
-
     position: absolute;
     background: rgba(174, 173, 173, 0.8);
     color: #fff;
     left:2%;
     top:50%;
-    z-index:5;
+    z-index:1;
     font-size:2rem;
     padding: 0.5rem;
     display:grid;
@@ -62,7 +62,7 @@ const ArrowRight = styled.div`
     color: #fff;
     Right:2%;
     top:50%;
-    z-index:5;
+    z-index:1;
     font-size:2rem;
     padding: 0.5rem;
     display:grid;

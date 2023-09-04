@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
-import styled from 'styled-components'
+import {styled,css} from 'styled-components'
 import { Link } from "react-router-dom"
 import { CartContext } from '../../context/CartContext';
 import { FaShoppingCart } from "react-icons/fa"
 import { FaSearch } from "react-icons/fa"
 import { RxAvatar } from "react-icons/rx"
+import { media } from '../../styles/MediaQueries';
+
 const NavBar = styled.div`
 background: #bfbfbf;
 color:#fbfbfc ;
@@ -14,8 +16,11 @@ align-items:center;
 padding-inline: 8rem;
 height:4rem;
 position:sticky;
-top:0;
-z-index:4;
+top:5rem;
+z-index:1;
+ ${media.tablet(css`
+ padding-inline: 0;
+ `)}
 `
 
 const StyledLink = styled(Link)`
@@ -31,6 +36,10 @@ color:#000 ;
 font-weight: 800;
 font-size: 2rem;
 line-height: 24px;
+${media.mobile(css`
+ padding-inline: 0;
+ font-size: 1rem;
+ `)}
 
 `
 
@@ -40,6 +49,10 @@ display: flex;
 justify-content:flex-end;
 align-items:center;
 gap:5px;
+${media.mobileSm(css`
+width:auto;
+ font-size: 1rem;
+ `)}
 `
 const SearchContainer = styled.div`
 width:60%;
@@ -80,7 +93,12 @@ border-radius: 50%;
 width: 25px;
 height:25px;
 text-align:center;
-transform: translateY(-25px)
+transform: translateY(-25px);
+${media.mobile(css`
+// transform: translateY(-20px);
+transform: translate(-15px,-20px);
+
+ `)}
 
 `;
 function SubNav() {

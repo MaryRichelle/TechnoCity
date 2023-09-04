@@ -5,15 +5,25 @@ import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/MediaQueries';
 
 const Container = styled.section`
-    width: 90%;
+    width: 100%;
     margin:auto;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius:4px;
-    z-index:2;
-    background: #ff6347;
+    background: rgb(255, 99, 71);
     padding:5rem;
+    position:relative;
+    &:after{
+    content: "";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background: rgba(88, 84, 84, 0.27);
+    z-index: 1;
+}
     ${media.desktopMd(css`
     `)}
     `
@@ -27,30 +37,14 @@ const CarouselImages = styled.img`
     height: 65vh;
   `)}
     ${media.mobile(css`
-    height: 40vh;
-    width: 100%;
+      height: 15vh;
+    width: 90vw;
   
     `)}
     
 `
 
-const ShopNowButton = styled.span`
-    display: inline-block;
-    font-size:1.2rem; 
-    font-weight: 800;
-    background:  #ff6347;
-    border: none;
-    border-radius: 4px;
-    outline:none;
-    padding: 1rem;
-    cursor: pointer;
-    margin-inline-start: 5%;
-    transform: skewX( -25deg);
-    &:hover{
-    opacity:.9;
-    color:#fff;
-    }
-`
+
 
 
 
