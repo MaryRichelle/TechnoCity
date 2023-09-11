@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import {styled,css} from 'styled-components'
+import { styled, css } from 'styled-components'
 import { Link } from "react-router-dom"
 import { CartContext } from '../../context/CartContext';
 import { FaShoppingCart } from "react-icons/fa"
@@ -119,7 +119,7 @@ function SubNav() {
             {cart.length}
           </ShoppingCartSpan>
         </StyledLink>
-       
+
       </RightSide>
     </NavBar>
   )

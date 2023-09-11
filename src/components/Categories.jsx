@@ -1,5 +1,5 @@
 import React from 'react'
-import {styled,css } from 'styled-components'
+import { styled, css } from 'styled-components'
 import { media } from '..//styles/MediaQueries';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 import { headerCarousel as images } from "../data/carousel_images"
@@ -57,7 +57,7 @@ ${media.tablet(css`
 width:10rem;
 height: 8rem;
 `
-  )}
+)}
 
 `
 const Button = styled.button`
@@ -106,7 +106,7 @@ const Categories = () => {
       <CategoryContainer>
         {
           images && images.map(img =>
-            <Category>
+            <Category key={img.image}>
               <CategoryImages src={img.image} />
               <Button>{img.title}</Button>
             </Category>

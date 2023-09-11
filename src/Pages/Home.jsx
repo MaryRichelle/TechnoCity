@@ -51,8 +51,8 @@ function Home() {
       <Carousel />
       <Container >
         <div>
-        <Heading >TOP RATED PRODUCTS</Heading>
-        <TopRatedProducts>Only the top rated products added recently in our catalog</TopRatedProducts>
+          <Heading >TOP RATED PRODUCTS</Heading>
+          <TopRatedProducts>Only the top rated products added recently in our catalog</TopRatedProducts>
         </div>
         <Hr />
         <AllProducts>
@@ -66,7 +66,7 @@ function Home() {
             <p>Loading data...</p>
           )}
         </AllProducts>
-        <Hr/>
+        <Hr />
       </Container>
     </Main>
   );

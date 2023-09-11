@@ -1,7 +1,7 @@
 import React from 'react'
-import {styled ,css} from 'styled-components'
+import { styled, css } from 'styled-components'
 import { Link } from "react-router-dom";
-import {media} from "../../styles/MediaQueries"
+import { media } from "../../styles/MediaQueries"
 
 const NavBar = styled.div`
 background:#232222;  

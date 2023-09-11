@@ -18,7 +18,7 @@ function Bottom() {
   return (
     <Footer>
       <License>© technoCity eCommerce. © 2020. All Rights Reserved</License>
-      <Socials/>
+      <Socials />
     </Footer>
   )
 }

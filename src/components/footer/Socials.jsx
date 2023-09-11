@@ -22,11 +22,11 @@ function Socials() {
   return (
     <Container>
 
-      <SocialLinks target="_blank" rel="noreferrer noopener"  href="https://www.facebook.com/"><FaFacebook size={30} /></SocialLinks>
+      <SocialLinks target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/"><FaFacebook size={30} /></SocialLinks>
       <SocialLinks target="_blank" rel="noreferrer noopener" href="https://twitter.com/"> <AiFillTwitterCircle size={30} /></SocialLinks>
-      <SocialLinks target="_blank" rel="noreferrer noopener"  href="https://instagram.com/?lang=en">< FaInstagramSquare size={30} /></SocialLinks >
+      <SocialLinks target="_blank" rel="noreferrer noopener" href="https://instagram.com/?lang=en">< FaInstagramSquare size={30} /></SocialLinks >
 
-      
+
     </Container>
   )
 }

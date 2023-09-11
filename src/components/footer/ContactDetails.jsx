@@ -11,7 +11,7 @@ function ContactDetails({ title, detail }) {
 
 
     <div>
-      
+
       <h3>{title}</h3>
       <DetailsP>{detail}</DetailsP>
     </div>

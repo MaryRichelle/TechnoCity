@@ -28,10 +28,10 @@ function Context({ children }) {
 
     getData();
   }, []);
-// console.log(products);
+  // console.log(products);
 
   const value = {
-    cart, 
+    cart,
     setCart,
     products
   }

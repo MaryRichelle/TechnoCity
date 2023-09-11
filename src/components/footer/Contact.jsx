@@ -12,7 +12,7 @@ const ContactInfo = styled.div`
  flex-direction: column;
  flex-grow:2;
  gap:1rem;`
- 
+
 const InfoContainer = styled.div`
 display: flex;
 justify-content:space-around;

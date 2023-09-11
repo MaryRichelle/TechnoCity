@@ -105,7 +105,7 @@ function Nav() {
   const { offer } = useContext(OffersData);
   const [open, setOpen] = useState(false);
 
-  
+
   return (
     <NavBar>
       <OffersText>
@@ -118,7 +118,7 @@ function Nav() {
         <StyledLink to="/laptops">PC and Laptops</StyledLink>
         <StyledLink to="/electronicAppliances">Home Appliances</StyledLink>
       </LinksContainer>
-      <HamburgerIcon open={open}  onClick={()=>setOpen(!open)}/>
+      <HamburgerIcon open={open} onClick={() => setOpen(!open)} />
     </NavBar>
   );
 }
