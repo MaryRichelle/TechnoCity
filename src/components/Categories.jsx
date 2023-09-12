@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { styled, css } from 'styled-components'
 import { media } from '..//styles/MediaQueries';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 import { headerCarousel as images } from "../data/carousel_images"
 import { BottomOfferTextKeyframes } from "../styles/Keyframes";
+import { OffersData } from "../context/OffersContext";
 
 const Container = styled.section`
 display: flex;
@@ -98,6 +99,8 @@ const DoubleArrow = styled(MdKeyboardDoubleArrowRight)`
 font-size:2rem;
 `
 const Categories = () => {
+  const offer = useContext(OffersData);
+
   return (
     <Container>
       <Hr />
@@ -114,7 +117,7 @@ const Categories = () => {
         }
       </CategoryContainer>
 
-      <OffersText>Receive a 5% discount when purchasing 3 products
+      <OffersText> {offer}
         <ShopNowBtn>Shop Now  </ShopNowBtn></OffersText>
     </Container>
   )

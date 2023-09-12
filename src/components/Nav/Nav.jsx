@@ -102,14 +102,15 @@ const HamburgerMenu = styled.div`
 
 
 function Nav() {
-  const { offer } = useContext(OffersData);
+  const  offer  = useContext(OffersData);
   const [open, setOpen] = useState(false);
 
 
   return (
     <NavBar>
       <OffersText>
-        Receive a 5% discount when purchasing 3 products {offer}
+        {/* Receive a 5% discount when purchasing 3 products  */}
+        {offer}
       </OffersText>
       <LinksContainer open={open}>
         <StyledLink to="/">Home</StyledLink>

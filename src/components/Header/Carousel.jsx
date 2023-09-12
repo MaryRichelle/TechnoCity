@@ -110,7 +110,7 @@ const ShopNowButton = styled.span`
 function Carousel() {
   const navigate = useNavigate()
 
-  const { offer } = useContext(OffersData);
+  const  offer  = useContext(OffersData);
 
   const [currentImage, setCurrentImage] = useState(0);
   function handleLeftClick() {
@@ -137,7 +137,7 @@ function Carousel() {
           alt="A image of Electronic Appliances " loading="lazy" />)
       }
       <RightTextContainer>
-        <Text >{offer}Receive a 5% discount when purchasing 3 products<ShopNowButton onClick={handleClick}>Shop Now < AiOutlineArrowRight /> </ShopNowButton> </Text>
+        <Text >{offer}<ShopNowButton onClick={handleClick}>Shop Now < AiOutlineArrowRight /> </ShopNowButton> </Text>
 
       </RightTextContainer>
     </Container>

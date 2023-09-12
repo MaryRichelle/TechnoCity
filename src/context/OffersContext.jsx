@@ -9,8 +9,8 @@ function OffersContext({ children }) {
   useEffect(() => {
     const intervalId = setInterval(() => {
       const newOffer = getRandomOffer();
-      setOffer((prevOffer) => [...prevOffer, newOffer]);
-    }, 5000);
+      setOffer( newOffer);
+    }, 8000);
 
     return () => clearInterval(intervalId);
   }, []);
