@@ -1,8 +1,10 @@
 import React from 'react'
+import FilteredCategories from "../components/FilteredCategories"
 
-function Laptops() {
+
+const Laptops = () => {
   return (
-    <div>Laptops</div>
+    <FilteredCategories category={"laptops"} title={"PCs and  Laptops"} />
   )
 }
 

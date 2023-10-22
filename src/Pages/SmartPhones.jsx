@@ -1,8 +1,8 @@
 import React from 'react'
-
-function SmartPhones() {
+import FilteredCategories from "../components/FilteredCategories"
+const SmartPhones = () => {
   return (
-    <div> SmartPhones</div>
+    <FilteredCategories category={"Phones and Accessories"} title={"Smart Phones"} />
   )
 }
 

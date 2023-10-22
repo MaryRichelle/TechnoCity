@@ -54,10 +54,12 @@ function Product({ product }) {
   return (
     <>
       <Card>
-        <Images src={image} alt="" />
+        <Images src={image} alt={title} />
         <Description >
           <p> {title}</p>
-          <p>Price:&euro; {price.slice(1, 4)}</p>
+          <p>Price:&euro;
+            {price.slice(1, 4)}
+          </p>
         </Description>
         {cart.includes(product) ? (
           <CartBtn

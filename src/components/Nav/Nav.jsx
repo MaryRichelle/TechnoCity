@@ -82,6 +82,7 @@ font-size:15px; `)}
 `
 const HamburgerIcon = styled(GiHamburgerMenu)`
 display:none;
+background:inherit;
 font-size:3rem;
 cursor:pointer;
 z-index:6;
@@ -92,7 +93,7 @@ display:block; `)}
 
 
 function Nav() {
-  const  offer  = useContext(OffersData);
+  const offer = useContext(OffersData);
   const [open, setOpen] = useState(false);
 
 
@@ -106,7 +107,7 @@ function Nav() {
         <StyledLink to="/smartphones">Smart Phones</StyledLink>
         <StyledLink to="/smartwatches">Smart watches</StyledLink>
         <StyledLink to="/laptops">PC and Laptops</StyledLink>
-        <StyledLink to="/electronicAppliances">Home Appliances</StyledLink>
+        <StyledLink to="/home-appliances">Home Appliances</StyledLink>
       </LinksContainer>
       <HamburgerIcon open={open} onClick={() => setOpen(!open)} />
     </NavBar>
