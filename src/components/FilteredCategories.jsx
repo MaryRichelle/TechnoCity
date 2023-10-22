@@ -22,11 +22,16 @@ width: 100%;
 margin:auto;
 
 `
+const H1 = styled.h1`
+text-align: center;
+font-size: 2.5rem;
+font-weight: 1000;
+`
 function FilteredCategories({ category, title }) {
   const { filteredProducts } = useProductFilter(category)
   return (
     <Container >
-      <h1>{title}</h1>
+      <H1>{title}</H1>
       <AllProducts>
 
         {

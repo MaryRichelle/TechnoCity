@@ -36,7 +36,7 @@ const CartBtn = styled.button`
  background: #e5e3e3;
 border: none;
 padding: 0.8rem;
-width: 60%;
+width: 100%;
 border-radius:4px;
 cursor:pointer;
 font-weight: bold;
