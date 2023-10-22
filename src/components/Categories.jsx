@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { styled, css } from 'styled-components'
 import { media } from '..//styles/MediaQueries';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 import { headerCarousel as images } from "../data/carousel_images"
 import { BottomOfferTextKeyframes } from "../styles/Keyframes";
 import { OffersData } from "../context/OffersContext";
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled.section`
 display: flex;
@@ -22,6 +23,7 @@ justify-content: center;
 flex-wrap: wrap;
 align-items: center;
 gap:2rem;
+cursor:pointer;
 `
 
 const Heading = styled.h2`
@@ -100,6 +102,8 @@ font-size:2rem;
 `
 const Categories = () => {
   const offer = useContext(OffersData);
+  const navigate = useNavigate()
+  
 
   return (
     <Container>
@@ -109,9 +113,9 @@ const Categories = () => {
       <CategoryContainer>
         {
           images && images.map(img =>
-            <Category key={img.image}>
+            <Category key={img.image} onClick={() => navigate(img.title)}>
               <CategoryImages src={img.image} />
-              <Button>{img.title}</Button>
+              <Button>{img.title.charAt(0).toUpperCase() + img.title.slice(1).toLowerCase()}</Button>
             </Category>
           )
         }

@@ -17,7 +17,7 @@ font-size:0.8rem;
 function Bottom() {
   return (
     <Footer>
-      <License>© technoCity eCommerce. © 2020. All Rights Reserved</License>
+      <License>© technoCity eCommerce. © 2023. All Rights Reserved</License>
       <Socials />
     </Footer>
   )

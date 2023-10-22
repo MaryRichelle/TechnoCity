@@ -51,7 +51,7 @@ function Nav() {
         <StyledLink to="/smartphones">Smart Phones</StyledLink>
         <StyledLink to="/smartwatches">Smart watches</StyledLink>
         <StyledLink to="/laptops">Laptops</StyledLink>
-        <StyledLink to="/electronicAppliances">Electronic Appliances</StyledLink>
+        <StyledLink to="/home-appliances">Electronic Appliances</StyledLink>
       </LinksContainer>
 
     </NavBar>

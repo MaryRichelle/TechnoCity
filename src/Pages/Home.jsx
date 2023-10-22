@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { CartContext } from '../context/CartContext';
 import Product from "../components/Product"
 import Carousel from "../components/Header/Carousel"
-
+import Categories from '../components/Categories';
+import BottomCarousel from "../components/BottomCarousel"
   const Main = styled.main`
   width: 100vw;
   margin:auto;
@@ -46,6 +47,7 @@ function Home() {
   const { products } = useContext(CartContext)
 
   return (
+    <>
     <Main >
       <Carousel />
       <Container >
@@ -68,6 +70,9 @@ function Home() {
         <Hr />
       </Container>
     </Main>
+     <BottomCarousel />
+        <Categories />
+    </>
   );
 }
 

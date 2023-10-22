@@ -14,18 +14,18 @@ export const bottomCarouselImages = [
 export const headerCarousel = [
   {
     "image": macbook,
-    "title": "Laptops"
+    "title": "laptops"
   },
   {
     "image": iphone,
-    "title": "Phone"
+    "title": "smartphones"
   },
   {
     "image": applewatch,
-    "title": "Watch"
+    "title": "smartwatches"
   },
   {
     "image": kitchenAppliances,
-    "title": "Appliances"
+    "title": "home-appliances"
   }
 ]
