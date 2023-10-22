@@ -3,7 +3,7 @@
 
  E-Commerce Website
 
-## [Live Demo](https://techno-city-ecommerce.vercel.app/home-appliances)
+## [Live Demo](https://techno-city-ecommerce.vercel.app/)
 
 ## build with
 
