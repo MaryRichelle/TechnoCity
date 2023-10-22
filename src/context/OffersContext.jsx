@@ -9,7 +9,7 @@ function OffersContext({ children }) {
   useEffect(() => {
     const intervalId = setInterval(() => {
       const newOffer = getRandomOffer();
-      setOffer( newOffer);
+      setOffer(newOffer);
     }, 8000);
 
     return () => clearInterval(intervalId);
@@ -20,7 +20,6 @@ function OffersContext({ children }) {
     return offers[randomIndex];
   };
 
-  // console.log(offer);
 
   return (
     <OffersData.Provider value={offer}>

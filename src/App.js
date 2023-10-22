@@ -20,9 +20,9 @@ function App() {
       <MainApp>
         <Nav />
         <SubNav />
-        <AppRoutes/>
-        <BottomCarousel/>
-        <Categories/>
+        <AppRoutes />
+        <BottomCarousel />
+        <Categories />
         <Footer />
       </MainApp>
     </Router>

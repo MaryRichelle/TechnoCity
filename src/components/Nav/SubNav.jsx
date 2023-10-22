@@ -95,7 +95,6 @@ height:25px;
 text-align:center;
 transform: translateY(-25px);
 ${media.mobile(css`
-// transform: translateY(-20px);
 transform: translate(-15px,-20px);
 
  `)}

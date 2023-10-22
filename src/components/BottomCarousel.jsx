@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { styled, css } from 'styled-components'
 import { bottomCarouselImages as images } from "../data/carousel_images"
-import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/MediaQueries';
 
 const Container = styled.section`
@@ -49,7 +48,6 @@ const CarouselImages = styled.img`
 
 
 function BottomCarousel() {
-  const navigate = useNavigate()
 
 
   const [currentImage, setCurrentImage] = useState(0);

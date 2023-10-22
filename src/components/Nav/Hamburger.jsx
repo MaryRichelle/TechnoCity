@@ -20,6 +20,17 @@ color:#fbfbfc ;
   &:hover {
   color: #ff6347;
 }`
+const HamburgerMenu = styled.div`
+  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  background: red;
+  z-index: 5;
+
+  ${media.tablet(css`
+    display: flex;
+    flex-direction: column;
+  `)}
+`;
+
 
 const Hamburger = () => {
 
@@ -28,7 +39,8 @@ const Hamburger = () => {
   const toggleMenu = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
-
+  const HamburgerIcon = styled(GiHamburgerMenu)`
+  `
 
   return (
     <>

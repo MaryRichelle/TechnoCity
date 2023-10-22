@@ -109,10 +109,9 @@ const ShopNowButton = styled.span`
 
 function Carousel() {
   const navigate = useNavigate()
-
   const  offer  = useContext(OffersData);
-
   const [currentImage, setCurrentImage] = useState(0);
+  
   function handleLeftClick() {
     setCurrentImage(currentImage === images.length - 1 ? 0 : currentImage + 1);
   }

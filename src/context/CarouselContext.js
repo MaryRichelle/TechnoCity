@@ -15,7 +15,6 @@ const CarouselContext = ({ children }) => {
   const value = {
     carouselData
   }
-  console.log(carouselData.images);
   useEffect(() => {
     const productDetails = data.map(product => product)
     const allImages = productDetails.map(product => product.image);
@@ -25,7 +24,7 @@ const CarouselContext = ({ children }) => {
       products: productDetails,
     });
 
-  }, [])
+  }, [carouselData])
   return (
     <CarouselData.Provider value={value}>
       {children}

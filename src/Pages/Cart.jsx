@@ -15,10 +15,9 @@ flex-wrap: wrap;
 `
 function Cart() {
   const { cart } = useContext(CartContext)
-
   const [total, setTotal] = useState(0)
-  useEffect(() => {
 
+  useEffect(() => {
     setTotal(
       cart.reduce((acc, currentValue) => acc + Number(currentValue.price.slice(1, 4)), 0)
     )

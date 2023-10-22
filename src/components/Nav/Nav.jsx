@@ -89,16 +89,6 @@ ${media.tablet(css`
 display:block; `)}
 
 `
-const HamburgerMenu = styled.div`
-  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
-  background: red;
-  z-index: 5;
-
-  ${media.tablet(css`
-    display: flex;
-    flex-direction: column;
-  `)}
-`;
 
 
 function Nav() {
@@ -109,7 +99,6 @@ function Nav() {
   return (
     <NavBar>
       <OffersText>
-        {/* Receive a 5% discount when purchasing 3 products  */}
         {offer}
       </OffersText>
       <LinksContainer open={open}>
