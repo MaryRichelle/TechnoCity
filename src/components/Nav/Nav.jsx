@@ -28,6 +28,7 @@ justify-content: space-around;
 align-items:center;
 color:#fbfbfc ;
 column-gap :1rem;
+background:inherit;
 ${media.desktopMd(css`
 column-gap :2rem;
  `)}
@@ -53,7 +54,6 @@ const StyledLink = styled(Link)`
 text-decoration: none;
 font-size:.9rem;
 color:#fbfbfc ;
-
 &:active{
   background: white;
   transform: skewX( -25deg);
