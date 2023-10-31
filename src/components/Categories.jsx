@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext} from 'react'
 import { styled, css } from 'styled-components'
 import { media } from '..//styles/MediaQueries';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md"
