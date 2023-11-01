@@ -11,7 +11,6 @@ align-items: center;
 justify-content: space-around;
 gap:2rem;
 font-size:1em;
- padding-inline:.5rem;
 
 `
 const Description = styled.article`
@@ -19,6 +18,8 @@ display: flex;
 flex-direction: column;
 width: 100%;
 justify-content: space-between;
+ padding-inline:.8rem;
+
 `
 const Images = styled.img`
 max-width: 180px;
@@ -33,7 +34,7 @@ object-fit: fill;
 
 
 const CartBtn = styled.button`
- background: #e5e3e3;
+background: #e5e3e3;
 border: none;
 padding: 0.8rem;
 width: 100%;
@@ -42,10 +43,9 @@ cursor:pointer;
 font-weight: bold;
 color:#080808 ;
 font-size:1em;
-transform: skewX(-10deg);
 transition: all 1s ease-in-out;
 &:hover{
-background: #ababab;
+background: #ff6347;
 color: #fcfaf9}
 `
 function Product({ product }) {

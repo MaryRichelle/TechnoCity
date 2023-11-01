@@ -5,12 +5,12 @@ import Product from "../components/Product"
 import Carousel from "../components/Header/Carousel"
 import Categories from '../components/Categories';
 import BottomCarousel from "../components/BottomCarousel"
-  const Main = styled.main`
+const Main = styled.main`
   width: 100vw;
   margin:auto;
   `
 
-  const Container = styled.section`
+const Container = styled.section`
   width: 85%;
   margin:auto;
   padding-block:6rem;
@@ -21,21 +21,21 @@ import BottomCarousel from "../components/BottomCarousel"
   align-item:center;
   `
 
-  const Heading = styled.h2`
+const Heading = styled.h2`
   display: flex;
   justify-content: center;
   align-items:center;
   `
-  const Hr = styled.hr`
+const Hr = styled.hr`
   width: 70%;
   margin: auto;
   background: #716c6c;
 
   `
-  const TopRatedProducts = styled.p`
+const TopRatedProducts = styled.p`
   text-align: center;
   `
-  const AllProducts = styled.div`
+const AllProducts = styled.div`
   display:grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap:4rem;
@@ -48,30 +48,30 @@ function Home() {
 
   return (
     <>
-    <Main >
-      <Carousel />
-      <Container >
-        <div>
-          <Heading >TOP RATED PRODUCTS</Heading>
-          <TopRatedProducts>Only the top rated products added recently in our catalog</TopRatedProducts>
-        </div>
-        <Hr />
-        <AllProducts>
-          {products ? (
+      <Main >
+        <Carousel />
+        <Container >
+          <div>
+            <Heading >TOP RATED PRODUCTS</Heading>
+            <TopRatedProducts>Only the top rated products added recently in our catalog</TopRatedProducts>
+          </div>
+          <Hr />
+          <AllProducts>
+            {products ? (
 
-            products.map((product) => {
-              return <Product product={product} key={product.id} />;
-            })
+              products.map((product) => {
+                return <Product product={product} key={product.id} />;
+              })
 
-          ) : (
-            <p>Loading data...</p>
-          )}
-        </AllProducts>
-        <Hr />
-      </Container>
-    </Main>
-     <BottomCarousel />
-        <Categories />
+            ) : (
+              <p>Loading data...</p>
+            )}
+          </AllProducts>
+          <Hr />
+        </Container>
+      </Main>
+      <BottomCarousel />
+      <Categories />
     </>
   );
 }

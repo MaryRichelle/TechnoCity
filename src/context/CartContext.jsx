@@ -2,11 +2,9 @@ import React, { createContext, useState, useEffect } from 'react'
 import axios from 'axios';
 
 export const CartContext = createContext()
-function Context({ children }) {
+function ProductsContext({ children }) {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([])
-
-
   useEffect(() => {
     async function getData() {
       const options = {
@@ -39,4 +37,4 @@ function Context({ children }) {
   )
 }
 
-export default Context
+export default ProductsContext

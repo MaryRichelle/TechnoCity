@@ -11,16 +11,12 @@ flex-direction: column;
 justify-content:space-around;
 `
 function App() {
-
-
   return (
-
     <Router>
       <MainApp>
         <Nav />
         <SubNav />
         <AppRoutes />
-       
         <Footer />
       </MainApp>
     </Router>
