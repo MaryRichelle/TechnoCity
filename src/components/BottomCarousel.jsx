@@ -21,7 +21,7 @@ const Container = styled.section`
     top:0;
     left:0;
     background: rgba(88, 84, 84, 0.27);
-    z-index: 1;
+    z-index: 0.5;
 }
     ${media.desktopMd(css`
     `)}

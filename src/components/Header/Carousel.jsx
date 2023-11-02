@@ -39,14 +39,16 @@ const CarouselImages = styled.img`
   
     `)}
 `
-const ArrowLeft = styled.div`
+const ArrowLeft = styled.button`
     position: absolute;
     background: rgba(174, 173, 173, 0.8);
     color: #fff;
     left:2%;
     top:50%;
-    z-index:1;
     font-size:2rem;
+    z-index:0.5;
+    outline:none;
+    border:none;
     padding: 0.5rem;
     display:grid;
     place-items:center ;
@@ -62,8 +64,10 @@ const ArrowRight = styled.div`
     color: #fff;
     Right:2%;
     top:50%;
-    z-index:1;
-    font-size:2rem;
+     z-index:0.5;
+    outline:none;
+    border:none;  
+      font-size:2rem;
     padding: 0.5rem;
     display:grid;
     place-items:center ;   
@@ -109,9 +113,9 @@ const ShopNowButton = styled.span`
 
 function Carousel() {
   const navigate = useNavigate()
-  const  offer  = useContext(OffersData);
+  const offer = useContext(OffersData);
   const [currentImage, setCurrentImage] = useState(0);
-  
+
   function handleLeftClick() {
     setCurrentImage(currentImage === images.length - 1 ? 0 : currentImage + 1);
   }
