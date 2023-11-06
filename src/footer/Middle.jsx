@@ -3,7 +3,7 @@ import { styled, css } from 'styled-components'
 import About from "./About"
 import Contact from "./Contact"
 import NewsLetter from "./NewsLetter"
-import { media } from '../../styles/MediaQueries';
+import { media } from '../styles/MediaQueries';
 
 const Container = styled.section`
   flex-grow: 2;

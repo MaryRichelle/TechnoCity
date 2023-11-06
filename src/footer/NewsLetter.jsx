@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled, css } from 'styled-components'
-import { media } from "../../styles/MediaQueries"
+import { media } from "../styles/MediaQueries"
 const Container = styled.section`
 display : flex;
 flex-direction: column;

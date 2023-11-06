@@ -1,10 +1,10 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import { styled } from 'styled-components';
 import AppRoutes from "./components/AppRoutes"
-import Nav from './components/Nav/Nav';
-import SubNav from './components/Nav/SubNav';
+import Nav from './Nav/Nav';
+import SubNav from './Nav/SubNav';
 
-import Footer from './components/footer/Footer';
+import Footer from './footer/Footer';
 const MainApp = styled.main`
 display:flex;
 flex-direction: column;

@@ -1,12 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { styled, css } from 'styled-components'
 import { Link } from "react-router-dom"
-import { CartContext } from '../../context/CartContext';
+import { CartContext } from '../context/CartContext';
 import { FaShoppingCart } from "react-icons/fa"
 import { FaSearch } from "react-icons/fa"
 import { RxAvatar } from "react-icons/rx"
-import { media } from '../../styles/MediaQueries';
-
+import { media } from '../styles/MediaQueries';
+import { useSearch } from '../context/SearchProvider'
+import SearchResult from "./SearchResult"
 const NavBar = styled.div`
 background: #bfbfbf;
 color:#fbfbfc ;
@@ -62,6 +63,7 @@ justify-content:space-between;
 border-radius: 4px;
 border: 1px solid #fff;
 align-items: center;
+position:relative;
 
 `
 const SearchInput = styled.input`
@@ -96,32 +98,53 @@ text-align:center;
 transform: translateY(-25px);
 ${media.mobile(css`
 transform: translate(-15px,-20px);
-
  `)}
-
 `;
 function SubNav() {
-  const { cart } = useContext(CartContext)
+  const { cart } = useContext(CartContext);
+  const { dispatch } = useSearch();
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (e) => {
+    if (e.key === 'Enter') {
+      dispatch({ type: 'SET_QUERY', payload: searchQuery });
+    }
+
+  };
+
+  const handleClickSearch = () => {
+    dispatch({ type: 'SET_QUERY', payload: searchQuery });
+
+  };
 
   return (
+    <>
+      <NavBar>
+        <Brand to="/">TechoCity</Brand>
+        <RightSide>
+          <SearchContainer>
+            <SearchInput
+              placeholder="Search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyPress={handleSearch}
+            />
+            <SearchIcon onClick={handleClickSearch} />
+            {searchQuery ? <SearchResult /> : ""}
 
-    <NavBar>
-      <Brand to="/">TechoCity</Brand>
-      <RightSide>
-        <SearchContainer>
-          <SearchInput placeholder="Search" />
-          <SearchIcon />
-        </SearchContainer>
-        <RxAvatar size={30} />
-        <StyledLink to="/cart"> <FaShoppingCart size={30} />
-          <ShoppingCartSpan>
-            {cart.length}
-          </ShoppingCartSpan>
-        </StyledLink>
+          </SearchContainer>
 
-      </RightSide>
-    </NavBar>
-  )
+          <RxAvatar size={30} />
+          <StyledLink to="/cart">
+            <FaShoppingCart size={30} />
+            <ShoppingCartSpan>
+              {cart.length}
+            </ShoppingCartSpan>
+          </StyledLink>
+        </RightSide>
+      </NavBar>
+    </>
+  );
 }
 
-export default SubNav
+export default SubNav;

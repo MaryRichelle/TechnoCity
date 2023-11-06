@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react'
 import { styled, css } from 'styled-components'
 import { Link } from "react-router-dom"
-import { OffersData } from "../..//context/OffersContext";
-import { OfferTextKeyframes } from "../../styles/Keyframes";
-import { media } from '../../styles/MediaQueries';
+import { OffersData } from "../context/OffersContext";
+import { OfferTextKeyframes } from "../styles/Keyframes";
+import { media } from '../styles/MediaQueries';
 import { GiHamburgerMenu } from "react-icons/gi"
 
 const NavBar = styled.div`

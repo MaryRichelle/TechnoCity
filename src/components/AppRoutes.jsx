@@ -6,7 +6,7 @@ import SmartPhones from '../Pages/SmartPhones';
 import HomeAppliances from '../Pages/HomeAppliances';
 import SmartWatches from '../Pages/SmartWatches';
 import Laptops from '../Pages/Laptops';
-
+import Item from '../Pages/Item'
 
 
 
@@ -19,6 +19,7 @@ function AppRoutes() {
       <Route path="/laptops" element={<Laptops />} />
       <Route path="/home-appliances" element={<HomeAppliances />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/product/:id" element={<Item />}/>
     </Routes>
   )
 }

@@ -36,7 +36,7 @@ function FilteredCategories({ category, title }) {
 
         {
           filteredProducts && filteredProducts.map(product => {
-            return <Product key={product._id} product={product} />
+            return <Product key={product.image } product={product} />
           })
         }
 

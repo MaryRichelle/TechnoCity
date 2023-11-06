@@ -3,17 +3,19 @@ import ReactDOM from 'react-dom/client';
 import "./index.css"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Context from './context/CartContext';
+import ProductsContext from './context/CartContext';
 import OffersContext from "./context/OffersContext"
+import { SearchProvider } from "./context/SearchProvider"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <OffersContext>
-      <Context>
-        <App />
-      </Context>
-    </OffersContext>
-
+    <SearchProvider>
+      <OffersContext>
+        <ProductsContext>
+          <App />
+        </ProductsContext>
+      </OffersContext>
+    </SearchProvider>
   </React.StrictMode>
 );
 
