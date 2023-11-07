@@ -9,7 +9,8 @@ justify-content:space-between;
 align-items:center;
 background: inherit;
 color: var(--light-gray);
-gap:0.5rem;`
+gap:0.5rem;
+`
 const SocialLinks = styled.a`
 text-decoration: none;
 color: var(--light-gray);

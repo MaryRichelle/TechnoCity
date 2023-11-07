@@ -9,12 +9,12 @@ import { media } from '../styles/MediaQueries';
 import { useSearch } from '../context/SearchProvider'
 import SearchResult from "./SearchResult"
 const NavBar = styled.div`
-background: var(--light-gray);
+background: var(--dark-gray);
 color:#fff ;
 display: flex;
 justify-content: space-between;
 align-items:center;
-padding-inline: 8rem;
+padding-inline: 10%;
 height:4rem;
 position:sticky;
 top:5rem;

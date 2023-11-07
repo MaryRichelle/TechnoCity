@@ -11,7 +11,7 @@ const Main = styled.main`
   `
 
 const Container = styled.section`
-  width: 85%;
+  width: 80%;
   margin:auto;
   padding-block:6rem;
   display:flex;

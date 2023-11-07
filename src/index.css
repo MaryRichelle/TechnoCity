@@ -6,7 +6,9 @@
 }
 :root{
 --hover-color-tomato: rgb(255, 99, 71);
---dark-gray :rgba(174, 173, 173, 0.8);
+--dark-gray :rgba(174, 173, 173);
 --light-gray :rgb(212, 211, 211)
 }
+body{
+max-width:100vw;}
 

@@ -10,6 +10,7 @@ const NavBar = styled.div`
  background:#232222; 
 color:var(--light-gray) ;
 display: flex;
+flex-direction:column;
 justify-content: space-around ;
 align-items:center;
 padding-inline: 5rem;
@@ -23,6 +24,7 @@ justify-content: space-between ;
   `)}
 `
 const LinksContainer = styled.ul`
+align-self: self-end;
 display: flex;
 justify-content: space-around;
 align-items:center;
@@ -31,6 +33,8 @@ column-gap :1rem;
 background:inherit;
 ${media.desktopMd(css`
 column-gap :2rem;
+align-self: self-end;
+
  `)}
 ${media.tablet(css`
 flex-flow: column nowrap;
@@ -41,7 +45,6 @@ height: 50vh;
 width: 300px;
  background:#232222; 
 z-index:6;
-
 transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
 padding-top: 3.5rem;
 transition: transform 0.3s ease-in-out;
@@ -71,8 +74,8 @@ padding:.5rem 1.5rem;  `)}
 
 `
 const OffersText = styled.p`
-width: auto;
-animation:${OfferTextKeyframes} 7s linear infinite;
+width: 100vw;
+animation:${OfferTextKeyframes} 10s linear 0s infinite;
 ${media.tablet(css`
 width:100vw;
 font-size:15px; `)}
@@ -83,6 +86,8 @@ background:inherit;
 font-size:3rem;
 cursor:pointer;
 z-index:6;
+align-self: self-end;
+
 ${media.tablet(css`
 display:block; `)}
 

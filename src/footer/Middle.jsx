@@ -6,12 +6,11 @@ import NewsLetter from "./NewsLetter"
 import { media } from '../styles/MediaQueries';
 
 const Container = styled.section`
-  flex-grow: 2;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   column-gap: 4rem;
-    flex-direction: column;
+  flex-direction: column;
 
  
   ${media.desktopMd(css`
@@ -19,7 +18,6 @@ const Container = styled.section`
 
   `)}
 
-  /* Apply mobile styles */
 `;
 function Middle() {
   return (

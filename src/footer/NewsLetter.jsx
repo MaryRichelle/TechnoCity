@@ -1,6 +1,7 @@
 import React from 'react'
 import { styled, css } from 'styled-components'
 import { media } from "../styles/MediaQueries"
+
 const Container = styled.section`
 display : flex;
 flex-direction: column;
@@ -8,7 +9,6 @@ justify-content: space-around;
 align-items: start;
 gap:2rem;
 border-block-end: 1px solid #d3d2d2;
-padding-block: 2rem;
 
  ${media.desktopMd(css`
 border:none;

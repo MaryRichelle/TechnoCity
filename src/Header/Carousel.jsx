@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/MediaQueries';
 
 const Container = styled.section`
-    width: 100vw;
+    max-width: 96vw;
     display: flex;
     flex-direction: column;
     justify-content: baseline;
@@ -23,9 +23,9 @@ const Container = styled.section`
   
     `
 const CarouselImages = styled.img`
-    height: 60vh;
-    width: 50%;
-    object-fit: fit;
+    height: 50vh;
+    width: 60vw;
+    object-fit: conatin;
     &:hover{
       transform: scaleX(-1);
       transition: transform 1s ease-in-out;
@@ -87,7 +87,7 @@ const Text = styled.h2`
     font-size:3rem;
   `)}
     `
-const ShopNowButton = styled.span`
+const ShopNowButton = styled.button`
     display: inline-block;
     font-size:1.2rem; 
     font-weight: 800;
@@ -98,7 +98,7 @@ const ShopNowButton = styled.span`
     padding: 1rem;
     cursor: pointer;
     margin-inline-start: 5%;
-    transform: skewX( -25deg);
+    transform: skewX( -15deg);
     &:hover{
     opacity:.9;
     color:#fff;
