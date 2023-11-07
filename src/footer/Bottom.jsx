@@ -6,7 +6,7 @@ const Footer = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
-border-top: 1px solid #aeacac;
+border-top: 1px solid var(--light-gray);
 padding-block: 1rem;
 `
 

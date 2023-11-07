@@ -4,4 +4,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+:root{
+--hover-color-tomato: rgb(255, 99, 71);
+--dark-gray :rgba(174, 173, 173, 0.8);
+--light-gray :rgb(212, 211, 211)
+}
 

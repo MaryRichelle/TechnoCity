@@ -11,11 +11,11 @@ top:37px;
 background:#fbfbfc;
 color:black;
 border-radius:4px;
-border: 1px solid #bfbfbf;
-e
+border: 1px solid var(--light-gray);
+
 `
 const Li = styled.li`
-border: 1px solid #bfbfbf;
+border: 1px solid var(--light-gray);
 list-style:none;
 padding: 0.5rem;
 display:flex;
@@ -23,8 +23,8 @@ justify-content:space-between;
 align-items:center;
 border-left: 6px solid yellowgreen;
 &:hover{
-background:  #bfbfbf;
-color: #ff6347;
+background:  var(--light-gray);
+color: var(--hover-color-tomato);
 cursor:pointer;
 }
 `

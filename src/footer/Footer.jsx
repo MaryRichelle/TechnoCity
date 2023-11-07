@@ -6,9 +6,8 @@ import Middle from "./Middle"
 
 const StyledFooter = styled.footer`
 width:100vw;
-
 background:#232222;  
-color: #d3d2d2;
+color: var(--light-gray);
 `;
 const Container = styled.section`
 width: 80%;

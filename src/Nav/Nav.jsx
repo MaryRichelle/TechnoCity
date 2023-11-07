@@ -8,7 +8,7 @@ import { GiHamburgerMenu } from "react-icons/gi"
 
 const NavBar = styled.div`
  background:#232222; 
-color:#fbfbfc ;
+color:var(--light-gray) ;
 display: flex;
 justify-content: space-around ;
 align-items:center;
@@ -26,7 +26,7 @@ const LinksContainer = styled.ul`
 display: flex;
 justify-content: space-around;
 align-items:center;
-color:#fbfbfc ;
+color:var(--light-gray) ;
 column-gap :1rem;
 background:inherit;
 ${media.desktopMd(css`
@@ -59,7 +59,7 @@ color:#fbfbfc ;
   transform: skewX( -25deg);
 }
   &:hover {
-  color: #ff6347;
+  color: var(--hover-color-tomato);
 }
  ${media.desktopMd(css`
 font-size:1.2rem;
@@ -70,9 +70,6 @@ font-size:1.2rem;
 padding:.5rem 1.5rem;  `)}
 
 `
-
-
-
 const OffersText = styled.p`
 width: auto;
 animation:${OfferTextKeyframes} 7s linear infinite;
@@ -91,12 +88,9 @@ display:block; `)}
 
 `
 
-
 function Nav() {
   const offer = useContext(OffersData);
   const [open, setOpen] = useState(false);
-
-
   return (
     <NavBar>
       <OffersText>
