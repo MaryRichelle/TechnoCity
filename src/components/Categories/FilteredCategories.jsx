@@ -1,6 +1,6 @@
 import React from 'react'
-import useProductFilter from '../Hooks/useProductFilter';
-import Product from './Product';
+import useProductFilter from '../../Hooks/useProductFilter';
+import Product from '../Product';
 import styled from 'styled-components'
 
 const Container = styled.section`
@@ -36,7 +36,7 @@ function FilteredCategories({ category, title }) {
 
         {
           filteredProducts && filteredProducts.map(product => {
-            return <Product key={product.image } product={product} />
+            return <Product key={product.image} product={product} />
           })
         }
 

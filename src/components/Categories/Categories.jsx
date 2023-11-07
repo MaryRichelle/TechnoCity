@@ -1,10 +1,10 @@
-import React, { useContext} from 'react'
+import React, { useContext } from 'react'
 import { styled, css } from 'styled-components'
-import { media } from '..//styles/MediaQueries';
+import { media } from '../../styles/MediaQueries';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md"
-import { headerCarousel as images } from "../data/carousel_images"
-import { BottomOfferTextKeyframes } from "../styles/Keyframes";
-import { OffersData } from "../context/OffersContext";
+import { headerCarousel as images } from "../../data/carousel_images"
+import { BottomOfferTextKeyframes } from "../../styles/Keyframes";
+import { OffersData } from "../../context/OffersContext";
 import { useNavigate } from 'react-router-dom';
 
 const Container = styled.section`
@@ -103,7 +103,7 @@ font-size:2rem;
 const Categories = () => {
   const offer = useContext(OffersData);
   const navigate = useNavigate()
-  
+
 
   return (
     <Container>

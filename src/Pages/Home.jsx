@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { CartContext } from '../context/CartContext';
 import Product from "../components/Product"
 import Carousel from "../Header/Carousel"
-import Categories from '../components/Categories';
+import Categories from '../components/Categories/Categories';
 import BottomCarousel from "../components/BottomCarousel"
 const Main = styled.main`
   width: 100vw;

@@ -1,4 +1,4 @@
-import React, {  useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { useSearch } from '../context/SearchProvider';
@@ -32,16 +32,17 @@ const ProductImage = styled.img`
 width:30px;
 `
 
-function SearchResult() {
+function SearchResult({ setSearchQuery }) {
   const navigate = useNavigate()
   const { state } = useSearch();
   const { products } = useContext(CartContext);
   const { dispatch } = useSearch();
   const { results, searchQuery } = state;
-  function handleClickProduct(id){
+  function handleClickProduct(id) {
     navigate(`/product/${id}`);
-
-    }
+    dispatch({ type: 'SET_QUERY', payload: '' });
+    setSearchQuery("")
+  }
   useEffect(() => {
     const filteredResults = products.filter((product) => {
       if (searchQuery === "") return true;
@@ -57,7 +58,7 @@ function SearchResult() {
       {
         searchQuery &&
         results.map((result, index) => (
-          <Li key={result.image + index + result.title} onClick={() => handleClickProduct(result.id)}>
+          <Li key={result.id} onClick={() => handleClickProduct(result.id)}>
             {
               result.title.charAt(0).toUpperCase() + result.title.slice(1).toLowerCase()
             }

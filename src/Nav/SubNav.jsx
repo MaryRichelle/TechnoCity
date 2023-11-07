@@ -109,12 +109,10 @@ function SubNav() {
     if (e.key === 'Enter') {
       dispatch({ type: 'SET_QUERY', payload: searchQuery });
     }
-
   };
 
   const handleClickSearch = () => {
     dispatch({ type: 'SET_QUERY', payload: searchQuery });
-
   };
 
   return (
@@ -130,7 +128,7 @@ function SubNav() {
               onKeyPress={handleSearch}
             />
             <SearchIcon onClick={handleClickSearch} />
-            {searchQuery ? <SearchResult /> : ""}
+            {searchQuery ? <SearchResult setSearchQuery={setSearchQuery}/> : ""}
 
           </SearchContainer>
 
