@@ -10,7 +10,7 @@ const Container = styled.section`
     justify-content: center;
     align-items: center;
     border-radius:4px;
-    background: rgb(255, 99, 71);
+    background: var(--hover-color-tomato);
     padding:5rem;
     position:relative;
     &:after{
@@ -43,15 +43,8 @@ const CarouselImages = styled.img`
     
 `
 
-
-
-
-
 function BottomCarousel() {
-
-
   const [currentImage, setCurrentImage] = useState(0);
-
   function nextImage() {
     setCurrentImage(currentImage === 0 ? images.length - 1 : currentImage - 1);
   }
@@ -59,17 +52,12 @@ function BottomCarousel() {
     const intervalSet = setInterval(nextImage, 5000)
     return () => clearInterval(intervalSet)
   }, [currentImage])
-
-
-
   return (
     <Container>
-
       {
         images.map((image, index) => currentImage === index && <CarouselImages key={image} src={image}
           alt="A image of Electronic Appliances " loading="lazy" />)
       }
-
     </Container>
   )
 }

@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import { styled, css } from 'styled-components'
 import { CartContext } from '../../context/CartContext';
 import { Link } from "react-router-dom"
-
 import { FaShoppingCart } from "react-icons/fa"
 import { media } from '../../styles/MediaQueries';
 
@@ -16,7 +15,7 @@ const ShoppingCartSpan = styled.span`
 display: inline-block;
 font-size: 0.8rem;
 font-weight: bold;
-background: tomato;
+background:var(--hover-color-tomato);
 border-radius: 50%;
 width: 25px;
 height:25px;
@@ -79,7 +78,6 @@ const ShoppingCart = () => {
       <StyledLink to="/cart" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
         <FaShoppingCart size={30} />
         <ShoppingCartSpan>
-          {/* {cart.length} */}
         </ShoppingCartSpan>
       </StyledLink>
       {open && (

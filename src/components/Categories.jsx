@@ -30,17 +30,17 @@ const Heading = styled.h2`
 display: flex;
 justify-content: center;
 align-items:center;
-border-block-end: 1px solid #e5e2e2;
+border-block-end: 1px solid var(--light-gray);
 `
 const Hr = styled.hr`
 width: 70%;
 margin: auto;
-background: #716c6c;
+background: var(--dark-gray);
 
 `
 const Category = styled.div`
-background: #e5e2e2;
-border: 1px solid #e5e2e2;
+background: var(--light-gray);
+border: 1px solid var(--light-gray);
 display: flex;
 flex-direction: column;
 justify-content: space-around;
@@ -50,7 +50,7 @@ border-radius:14px;
 transform: skewX(-8deg);
 transition: background 0.3s linear;
 &:hover{
-background: #939292;
+background: var(--dark-gray);
 }
 `
 const CategoryImages = styled.img`
@@ -75,7 +75,7 @@ border-bottom-left-radius: 15px;
 border-bottom-right-radius: 15px;
   transition: background 0.3s ease-in-out;
 &:hover{
-  background: #ff6347;
+  background: var(--hover-color-tomato);
 }
 `
 
@@ -83,7 +83,7 @@ const OffersText = styled.p`
 width: auto;
 font-size: 2rem;
 animation:${BottomOfferTextKeyframes} 8s linear 0s infinite ;
- color: #ff6347;
+ color: var(--hover-color-tomato);
  ${media.mobile(css`
  width:100%;
  font-size:0.9rem;

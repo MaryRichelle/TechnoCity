@@ -24,8 +24,6 @@ function About() {
     <Container>
       <h2>What we Are</h2>
       <AboutText>our one-stop destination for the latest and greatest in laptops, mobile devices, and cutting-edge electronics. We're more than just an online store; we're your tech-savvy companions on the journey to a connected world.
-
-
       </AboutText>
     </Container>
   )

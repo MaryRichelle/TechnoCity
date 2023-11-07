@@ -9,8 +9,8 @@ import { media } from '../styles/MediaQueries';
 import { useSearch } from '../context/SearchProvider'
 import SearchResult from "./SearchResult"
 const NavBar = styled.div`
-background: #bfbfbf;
-color:#fbfbfc ;
+background: var(--light-gray);
+color:#fff ;
 display: flex;
 justify-content: space-between;
 align-items:center;
@@ -18,7 +18,7 @@ padding-inline: 8rem;
 height:4rem;
 position:sticky;
 top:5rem;
-z-index:1;
+z-index:2;
  ${media.tablet(css`
  padding-inline: 0;
  `)}
@@ -27,8 +27,9 @@ z-index:1;
 const StyledLink = styled(Link)`
 text-decoration: none;
 font-size:1.5rem;
-color:#fbfbfc ;
+color:#fff ;
 test-align:center;
+
 `
 const Brand = styled(Link)`
 font-size: 2rem;
@@ -83,14 +84,14 @@ const SearchIcon = styled(FaSearch)`
 margin-inline:4px;
 cursor:pointer;
 &:hover{
-color: #ff6347;
+color: var(--hover-color-tomato);
 }
 `
 const ShoppingCartSpan = styled.span`
 display: inline-block;
 font-size: 0.8rem;
 font-weight: bold;
-background: tomato;
+background:var(--hover-color-tomato);
 border-radius: 50%;
 width: 25px;
 height:25px;

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components'
-import { useContext } from 'react';
 import Product from "../components/Product"
 import { CartContext } from '../context/CartContext';
 
@@ -14,13 +13,11 @@ padding-block:2rem;
 
 `
 const MyCart = styled.article`
-
 display:flex;
 gap:2rem;
 justify-content:space-around;
 align-items:center;
 padding-block:2rem;
-
 `
 const H2 = styled.h2`
 font-size: 2rem;
@@ -32,11 +29,9 @@ justify-content:space-around;
 align-items:center;
 gap:2rem;
 flex-wrap: wrap;
-
 `
 const Button = styled.button`
-background: #ff6347;
-
+background: var(--hover-color-tomato);
 border: none;
 padding: 0.8rem;
 width: 100%;
@@ -48,9 +43,7 @@ font-size:1em;
 transition: all 1s ease-in-out;
 &:hover{
 background: #e5e3e3;
-
 }
-
 `
 const CheckOutSection = styled.section`
 display: flex;
@@ -62,6 +55,7 @@ padding:1.5rem;
 border-radius:4px;
 border: 1px solid #c8c7c7;
 `
+
 function Cart() {
   const { cart } = useContext(CartContext)
   const navigate = useNavigate()
@@ -98,7 +92,7 @@ function Cart() {
         </ProductsContainer>
         {cart && cart.length > 0 &&
           <CheckOutSection>
-            {total ? <h2>Total Amount: &euro; {total}</h2> : <p>Nothing In your Cart</p>}
+            {total ? <h2>Total Amount:  {total}&euro;</h2> : <p>Nothing In your Cart</p>}
             <Button> Check Out </Button>
             <Button onClick={handleClick}>
               Go to Shop

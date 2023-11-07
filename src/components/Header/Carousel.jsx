@@ -46,7 +46,6 @@ const ArrowLeft = styled.button`
     left:2%;
     top:50%;
     font-size:2rem;
-    z-index:0.5;
     outline:none;
     border:none;
     padding: 0.5rem;
@@ -55,7 +54,7 @@ const ArrowLeft = styled.button`
     cursor:pointer;
     &:hover{
       background-opacity : .5;
-      color:  #ff6347;
+      color:  var(--hover-color-tomato);
     }
     `
 const ArrowRight = styled.div`
@@ -64,10 +63,9 @@ const ArrowRight = styled.div`
     color: #fff;
     Right:2%;
     top:50%;
-     z-index:0.5;
     outline:none;
     border:none;  
-      font-size:2rem;
+    font-size:2rem;
     padding: 0.5rem;
     display:grid;
     place-items:center ;   
@@ -75,7 +73,7 @@ const ArrowRight = styled.div`
     
     &:hover{
       background-opacity : .5;
-      color:  #ff6347;
+      color:  var(--hover-color-tomato);
     }
     `
 const RightTextContainer = styled.div`
@@ -95,7 +93,7 @@ const ShopNowButton = styled.span`
     display: inline-block;
     font-size:1.2rem; 
     font-weight: 800;
-    background:  #ff6347;
+    background:  var(--hover-color-tomato);
     border: none;
     border-radius: 4px;
     outline:none;

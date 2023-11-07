@@ -14,7 +14,7 @@ const Container = styled.section`
     align-items: center;
     gap:2rem;
     z-index:2;
-    background: rgb(191, 191, 191);
+    background: var(--dark-gray);
     ${media.desktopMd(css`
       flex-direction: row;
       justify-content: space-around;
@@ -41,7 +41,7 @@ const CarouselImages = styled.img`
 `
 const ArrowLeft = styled.div`
     position: absolute;
-    background: rgba(174, 173, 173, 0.8);
+    background: var(--dark-gray);
     color: #fff;
     left:2%;
     top:50%;
@@ -53,12 +53,12 @@ const ArrowLeft = styled.div`
     cursor:pointer;
     &:hover{
       background-opacity : .5;
-      color:  #ff6347;
+      color:  var(--hover-color-tomato);
     }
     `
 const ArrowRight = styled.div`
     position: absolute;
-    background: rgba(174, 173, 173, 0.8);
+    background: var(--dark-gray);
     color: #fff;
     Right:2%;
     top:50%;
@@ -71,7 +71,7 @@ const ArrowRight = styled.div`
     
     &:hover{
       background-opacity : .5;
-      color:  #ff6347;
+      color:  var(--hover-color-tomato);
     }
     `
 const RightTextContainer = styled.div`
@@ -91,7 +91,7 @@ const ShopNowButton = styled.span`
     display: inline-block;
     font-size:1.2rem; 
     font-weight: 800;
-    background:  #ff6347;
+    background:  var(--hover-color-tomato);
     border: none;
     border-radius: 4px;
     outline:none;

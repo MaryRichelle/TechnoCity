@@ -29,7 +29,7 @@ const Heading = styled.h2`
 const Hr = styled.hr`
   width: 70%;
   margin: auto;
-  background: #716c6c;
+  background: var(--dark-gray);
 
   `
 const TopRatedProducts = styled.p`

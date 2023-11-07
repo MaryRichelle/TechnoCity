@@ -8,14 +8,14 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 background: inherit;
-color: #d3d2d2;
+color: var(--light-gray);
 gap:0.5rem;`
 const SocialLinks = styled.a`
 text-decoration: none;
-color: #d3d2d2;
+color: var(--light-gray);
 
  &:hover {
-  color: tomato;
+  color: var(--hover-color-tomato);
 }
 `
 function Socials() {

@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext';
 
 const Card = styled.div`
 border-radius:.4em;
-border: 1px solid #e8e8e6;
+border: 1px solid var(--light-gray);
 display:flex;
 flex-direction: column;
 align-items: center;
@@ -34,7 +34,7 @@ object-fit: fill;
 
 
 const CartBtn = styled.button`
-background: #e5e3e3;
+background: var(--light-gray);
 border: none;
 padding: 0.8rem;
 width: 100%;
@@ -45,8 +45,8 @@ color:#080808 ;
 font-size:1em;
 transition: all 1s ease-in-out;
 &:hover{
-background: #ff6347;
-color: #fcfaf9}
+background: var(--hover-color-tomato);
+color: #fff}
 `
 function Product({ product }) {
   const { cart, setCart } = useContext(CartContext)
