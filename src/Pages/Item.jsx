@@ -15,7 +15,7 @@ const Image = styled.img`
 width:40%;
 height:auto;
 `
- 
+
 const Article = styled.article`
 display: flex;
 flex-direction: column;
@@ -39,23 +39,23 @@ const Item = () => {
       }
 
     })
-  }, [])
+  }, [id, item, products])
 
   return (
+    id &&
     < Main>
-
       <Image src={item.image} />
       <Article>
-      <P>{item.title}</P>
+        <P>{item.title}</P>
         <P>Price: {item.price && item.price.slice(1, 4)} &euro;</P>
-        <P>Category:    
+        <P>Category:
           {
-            item.category &&  item.category.charAt(0).toUpperCase() + item.category.slice(1).toLowerCase()
+            item.category && item.category.charAt(0).toUpperCase() + item.category.slice(1).toLowerCase()
           }
-
         </P>
       </Article>
     </ Main>
+
   )
 }
 
