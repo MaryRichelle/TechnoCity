@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/MediaQueries';
 
 const Container = styled.section`
-    max-width: 96vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: baseline;
@@ -15,29 +15,26 @@ const Container = styled.section`
     gap:2rem;
     z-index:2;
     background: var(--dark-gray);
-    ${media.desktopMd(css`
+   ${media.desktopMd(css`
       flex-direction: row;
       justify-content: space-around;
-  
+      padding-block:2rem;
     `)}
   
     `
 const CarouselImages = styled.img`
     height: 50vh;
-    width: 60vw;
-    object-fit: conatin;
+    width: 80%;
+    object-fit: fit;
     &:hover{
       transform: scaleX(-1);
       transition: transform 1s ease-in-out;
     }
   ${media.desktopMd(css`
-    height: 75vh;
+    width:45%;
+    height: 65vh;
   `)}
-    ${media.mobile(css`
-    height: 70vh;
-    width: 100%;
-  
-    `)}
+   
 `
 const ArrowLeft = styled.div`
     position: absolute;
@@ -109,9 +106,9 @@ const ShopNowButton = styled.button`
 
 function Carousel() {
   const navigate = useNavigate()
-  const  offer  = useContext(OffersData);
+  const offer = useContext(OffersData);
   const [currentImage, setCurrentImage] = useState(0);
-  
+
   function handleLeftClick() {
     setCurrentImage(currentImage === images.length - 1 ? 0 : currentImage + 1);
   }

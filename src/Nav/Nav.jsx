@@ -7,6 +7,7 @@ import { media } from '../styles/MediaQueries';
 import { GiHamburgerMenu } from "react-icons/gi"
 
 const NavBar = styled.div`
+width:100vw;
  background:#232222; 
 color:var(--light-gray) ;
 display: flex;
@@ -74,10 +75,9 @@ padding:.5rem 1.5rem;  `)}
 
 `
 const OffersText = styled.p`
-width: 100vw;
+width: auto;
 animation:${OfferTextKeyframes} 10s linear 0s infinite;
 ${media.tablet(css`
-width:100vw;
 font-size:15px; `)}
 `
 const HamburgerIcon = styled(GiHamburgerMenu)`

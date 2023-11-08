@@ -80,7 +80,7 @@ border-bottom-right-radius: 15px;
 `
 
 const OffersText = styled.p`
-width: auto;
+width: 70vw;
 font-size: 2rem;
 animation:${BottomOfferTextKeyframes} 8s linear 0s infinite ;
  color: var(--hover-color-tomato);

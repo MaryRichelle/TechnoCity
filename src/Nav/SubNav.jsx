@@ -8,7 +8,9 @@ import { RxAvatar } from "react-icons/rx"
 import { media } from '../styles/MediaQueries';
 import { useSearch } from '../context/SearchProvider'
 import SearchResult from "./SearchResult"
+
 const NavBar = styled.div`
+width:100vw;
 background: var(--dark-gray);
 color:#fff ;
 display: flex;

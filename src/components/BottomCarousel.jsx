@@ -4,7 +4,7 @@ import { bottomCarouselImages as images } from "../data/carousel_images"
 import { media } from '../styles/MediaQueries';
 
 const Container = styled.section`
-    width: 100%;
+    width: 100vw;
     margin:auto;
     display: flex;
     justify-content: center;
