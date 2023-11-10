@@ -20,7 +20,7 @@ padding-inline: 10%;
 height:4rem;
 position:sticky;
 top:5rem;
-z-index:2;
+z-index:1;
  ${media.tablet(css`
  padding-inline: 0;
  `)}
@@ -131,7 +131,7 @@ function SubNav() {
               onKeyPress={handleSearch}
             />
             <SearchIcon onClick={handleClickSearch} />
-            {searchQuery ? <SearchResult setSearchQuery={setSearchQuery}/> : ""}
+            {searchQuery ? <SearchResult setSearchQuery={setSearchQuery} /> : ""}
 
           </SearchContainer>
 

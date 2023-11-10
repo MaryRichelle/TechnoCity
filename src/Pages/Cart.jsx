@@ -12,22 +12,23 @@ text-align:center;
 padding-block:2rem;
 
 `
+const H2 = styled.h2`
+font-size: 2rem;
+font-weight:bold;
+`
 const MyCart = styled.article`
+width:100%;
 display:flex;
-gap:2rem;
-justify-content:space-around;
+// gap:2rem;
+justify-content:space-between;
 align-items:center;
 padding-block:2rem;
 `
-const H2 = styled.h2`
-font-size: 2rem;
-`
 const ProductsContainer = styled.section`
-width:100%;
+flex-grow:1;
 display:flex;
 justify-content:space-around;
 align-items:center;
-gap:2rem;
 flex-wrap: wrap;
 `
 const Button = styled.button`
@@ -42,10 +43,11 @@ color:#080808 ;
 font-size:1em;
 transition: all 1s ease-in-out;
 &:hover{
-background: #e5e3e3;
+background: var(--light-gray);
 }
 `
 const CheckOutSection = styled.section`
+width:auto;
 display: flex;
 flex-direction: column;
 justify-content:space-around;
@@ -53,7 +55,6 @@ align-items:center;
 gap:2rem;
 padding:1.5rem;
 border-radius:4px;
-border: 1px solid #c8c7c7;
 `
 
 function Cart() {
@@ -61,7 +62,7 @@ function Cart() {
   const navigate = useNavigate()
   const [total, setTotal] = useState(0)
   const handleClick = () => {
-    navigate("/")
+    navigate("/shop")
   }
 
   useEffect(() => {
@@ -74,8 +75,6 @@ function Cart() {
     <Container>
       <H2>Your Cart</H2>
       <MyCart>
-
-
         <ProductsContainer>
           {cart && cart.length > 0 ? (
             cart.map((product, index) => (

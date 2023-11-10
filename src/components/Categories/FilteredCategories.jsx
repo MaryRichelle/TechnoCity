@@ -7,7 +7,7 @@ const Container = styled.section`
 width: 85%;
 margin:auto;
 padding-block:6rem;
- display:flex;
+display:flex;
 gap: 3rem;
 flex-direction: column;
 justify-content: space-around;
@@ -20,7 +20,6 @@ grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 gap:4rem;
 width: 100%;
 margin:auto;
-
 `
 const H1 = styled.h1`
 text-align: center;
@@ -33,7 +32,6 @@ function FilteredCategories({ category, title }) {
     <Container >
       <H1>{title}</H1>
       <AllProducts>
-
         {
           filteredProducts && filteredProducts.map(product => {
             return <Product key={product.image} product={product} />

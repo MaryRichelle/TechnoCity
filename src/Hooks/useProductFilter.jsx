@@ -1,4 +1,4 @@
-import {useState,useEffect, useContext} from "react"
+import { useState, useEffect, useContext } from "react"
 import { CartContext } from '../context/CartContext';
 
 const useProductFilter = (category) => {
@@ -13,8 +13,3 @@ const useProductFilter = (category) => {
 }
 
 export default useProductFilter
-/*
-   category: 'Phones and Accessories'
-   category: 'Smartwatches
-   category: 'Home Appliances'
-   */

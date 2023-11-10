@@ -11,6 +11,7 @@ align-items: center;
 justify-content: space-around;
 gap:2rem;
 font-size:1em;
+ background:#fff;
 
 `
 const Description = styled.article`
@@ -22,13 +23,13 @@ justify-content: space-between;
 
 `
 const Images = styled.img`
-max-width: 180px;
+width: 180px;
 height: 180px;
-object-fit: fill;
+object-fit: contain;
 &:hover{
     transform: scaleX(-1);
     transition: transform 0.5s ease-in-out ;
-    }
+ }
 
 `
 

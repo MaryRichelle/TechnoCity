@@ -61,7 +61,6 @@ width:10rem;
 height: 8rem;
 `
 )}
-
 `
 const Button = styled.button`
 background: #fff;
@@ -73,12 +72,11 @@ font-size: 1rem;
 padding:0.8rem 2.5rem;
 border-bottom-left-radius: 15px;
 border-bottom-right-radius: 15px;
-  transition: background 0.3s ease-in-out;
+transition: background 0.3s ease-in-out;
 &:hover{
   background: var(--hover-color-tomato);
 }
 `
-
 const OffersText = styled.p`
 width: 70vw;
 font-size: 2rem;
@@ -88,22 +86,21 @@ animation:${BottomOfferTextKeyframes} 8s linear 0s infinite ;
  width:100%;
  font-size:0.9rem;
  `)}
-
 `
-
 const ShopNowBtn = styled.span`
 color: #000;
 font-weight:1000;
 margin-left: 2rem;
 `
-
 const DoubleArrow = styled(MdKeyboardDoubleArrowRight)`
 font-size:2rem;
 `
 const Categories = () => {
   const offer = useContext(OffersData);
   const navigate = useNavigate()
-
+  const handleClick = () => {
+    navigate("/shop")
+  }
 
   return (
     <Container>
@@ -120,9 +117,8 @@ const Categories = () => {
           )
         }
       </CategoryContainer>
-
       <OffersText> {offer}
-        <ShopNowBtn>Shop Now  </ShopNowBtn></OffersText>
+        <ShopNowBtn onClick={handleClick}>Shop Now  </ShopNowBtn></OffersText>
     </Container>
   )
 }

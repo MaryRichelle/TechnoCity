@@ -13,9 +13,10 @@ const Container = styled.section`
     justify-content: baseline;
     align-items: center;
     gap:2rem;
-    z-index:2;
+    padding-block:2rem;
+    z-index:0.8;
     background: var(--dark-gray);
-   ${media.desktopMd(css`
+   ${media.desktop(css`
       flex-direction: row;
       justify-content: space-around;
       padding-block:2rem;
@@ -27,22 +28,26 @@ const CarouselImages = styled.img`
     width: 80%;
     object-fit: fit;
     &:hover{
-      transform: scaleX(-1);
-      transition: transform 1s ease-in-out;
+     transform: scaleX(-1);
+    transition: transform 1s ease-in-out;
     }
-  ${media.desktopMd(css`
-    width:45%;
-    height: 65vh;
+    ${media.tabletLg(css`
+    width:50%;
   `)}
+  ${media.desktop(css`
+    width:40%;
+    height: 70vh;
+  `)}
+  
    
 `
 const ArrowLeft = styled.div`
     position: absolute;
-    background: var(--dark-gray);
+    background: var(--light-gray);
     color: #fff;
     left:2%;
     top:50%;
-    z-index:1;
+    z-index:0.5;
     font-size:2rem;
     padding: 0.5rem;
     display:grid;
@@ -55,17 +60,16 @@ const ArrowLeft = styled.div`
     `
 const ArrowRight = styled.div`
     position: absolute;
-    background: var(--dark-gray);
+    background: var(--light-gray);
     color: #fff;
     Right:2%;
     top:50%;
-    z-index:1;
+    z-index:0.5;
     font-size:2rem;
     padding: 0.5rem;
     display:grid;
     place-items:center ;   
     cursor:pointer;
-    
     &:hover{
       background-opacity : .5;
       color:  var(--hover-color-tomato);
@@ -73,8 +77,6 @@ const ArrowRight = styled.div`
     `
 const RightTextContainer = styled.div`
   flex-basis:40%;
- 
-
 
 `
 const Text = styled.h2`
@@ -102,8 +104,6 @@ const ShopNowButton = styled.button`
     }
 `
 
-
-
 function Carousel() {
   const navigate = useNavigate()
   const offer = useContext(OffersData);
@@ -119,22 +119,20 @@ function Carousel() {
     const intervalSet = setInterval(handleNextClick, 5000)
     return () => clearInterval(intervalSet)
   }, [currentImage])
+
   const handleClick = () => {
-    navigate("/")
+    navigate("/shop")
   }
-
-
   return (
     <Container>
       <ArrowLeft onClick={handleLeftClick}><AiOutlineArrowLeft /></ArrowLeft>
       <ArrowRight onClick={handleNextClick}><AiOutlineArrowRight /></ArrowRight>
       {
         images.map((image, index) => currentImage === index && <CarouselImages key={image} src={image.image}
-          alt="A image of Electronic Appliances " loading="lazy" />)
+          alt={image.title} loading="lazy" />)
       }
       <RightTextContainer>
         <Text >{offer}<ShopNowButton onClick={handleClick}>Shop Now < AiOutlineArrowRight /> </ShopNowButton> </Text>
-
       </RightTextContainer>
     </Container>
   )
