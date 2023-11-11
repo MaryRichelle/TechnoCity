@@ -57,7 +57,7 @@ function SearchResult({ setSearchQuery }) {
     <Ul>
       {
         searchQuery &&
-        results.map((result, index) => (
+        results.map((result) => (
           <Li key={result.id} onClick={() => handleClickProduct(result.id)}>
             {
               result.title.charAt(0).toUpperCase() + result.title.slice(1).toLowerCase()

@@ -19,17 +19,17 @@ font-weight:bold;
 const MyCart = styled.article`
 width:100%;
 display:flex;
-// gap:2rem;
+gap:2rem;
 justify-content:space-between;
 align-items:center;
 padding-block:2rem;
 `
 const ProductsContainer = styled.section`
 flex-grow:1;
-display:flex;
-justify-content:space-around;
-align-items:center;
-flex-wrap: wrap;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 0.4fr));
+gap: 4rem;
+margin: auto;
 `
 const Button = styled.button`
 background: var(--hover-color-tomato);

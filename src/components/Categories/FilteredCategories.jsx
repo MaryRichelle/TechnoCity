@@ -2,6 +2,8 @@ import React from 'react'
 import useProductFilter from '../../Hooks/useProductFilter';
 import Product from '../Product';
 import styled from 'styled-components'
+import Offers from "../Offers"
+import TopRatedProducts from "../../components/TopRatedProducts"
 
 const Container = styled.section`
 width: 85%;
@@ -39,6 +41,8 @@ function FilteredCategories({ category, title }) {
         }
 
       </AllProducts>
+      <TopRatedProducts length={4} heading="Related Products" description="More  Related Products in This Category " />
+      <Offers />
     </Container>
   )
 }

@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { styled, css } from 'styled-components'
 import { media } from '../../styles/MediaQueries';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 import { headerCarousel as images } from "../../data/carousel_images"
-import { BottomOfferTextKeyframes } from "../../styles/Keyframes";
-import { OffersData } from "../../context/OffersContext";
 import { useNavigate } from 'react-router-dom';
+import OffersText from "../../components/Offers"
+
 
 const Container = styled.section`
 display: flex;
@@ -77,30 +77,13 @@ transition: background 0.3s ease-in-out;
   background: var(--hover-color-tomato);
 }
 `
-const OffersText = styled.p`
-width: 70vw;
-font-size: 2rem;
-animation:${BottomOfferTextKeyframes} 8s linear 0s infinite ;
- color: var(--hover-color-tomato);
- ${media.mobile(css`
- width:100%;
- font-size:0.9rem;
- `)}
-`
-const ShopNowBtn = styled.span`
-color: #000;
-font-weight:1000;
-margin-left: 2rem;
-`
+
 const DoubleArrow = styled(MdKeyboardDoubleArrowRight)`
 font-size:2rem;
 `
 const Categories = () => {
-  const offer = useContext(OffersData);
   const navigate = useNavigate()
-  const handleClick = () => {
-    navigate("/shop")
-  }
+ 
 
   return (
     <Container>
@@ -117,8 +100,8 @@ const Categories = () => {
           )
         }
       </CategoryContainer>
-      <OffersText> {offer}
-        <ShopNowBtn onClick={handleClick}>Shop Now  </ShopNowBtn></OffersText>
+      <OffersText />
+
     </Container>
   )
 }

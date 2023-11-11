@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { CartContext } from '../context/CartContext';
-
+import { useNavigate } from 'react-router-dom';
 const Card = styled.div`
 border-radius:.4em;
 border: 1px solid var(--light-gray);
@@ -11,7 +11,8 @@ align-items: center;
 justify-content: space-around;
 gap:2rem;
 font-size:1em;
- background:#fff;
+background:#fff;
+cursor:pointer;
 
 `
 const Description = styled.article`
@@ -19,7 +20,7 @@ display: flex;
 flex-direction: column;
 width: 100%;
 justify-content: space-between;
- padding-inline:.8rem;
+padding-inline:.8rem;
 
 `
 const Images = styled.img`
@@ -30,10 +31,7 @@ object-fit: contain;
     transform: scaleX(-1);
     transition: transform 0.5s ease-in-out ;
  }
-
 `
-
-
 const CartBtn = styled.button`
 background: var(--light-gray);
 border: none;
@@ -52,29 +50,34 @@ color: #fff}
 function Product({ product }) {
   const { cart, setCart } = useContext(CartContext)
   const { title, price, image, id } = product;
+  const navigate = useNavigate()
+  function handleClickProduct(id) {
+    navigate(`/product/${id}`);
+
+  }
   return (
-    <>
-      <Card>
-        <Images src={image} alt={title} />
-        <Description >
-          <p> {title}</p>
-          <p>Price:&euro;
-            {price.slice(1, 4)}
-          </p>
-        </Description>
-        {cart.includes(product) ? (
-          <CartBtn
-            onClick={() => {
-              setCart(cart.filter(el => el.id !== id))
-            }}
-          >Remove From cart</CartBtn>
-        ) : (
-          <CartBtn onClick={() => {
-            setCart([...cart, product])
-          }}>Add To Cart</CartBtn>
-        )}
-      </Card>
-    </>
+
+    <Card onClick={() => handleClickProduct(id)}>
+      <Images src={image} alt={title} />
+      <Description >
+        <p> {title}</p>
+        <p>Price:&euro;
+          {price.slice(1, 4)}
+        </p>
+      </Description>
+      {cart.includes(product) ? (
+        <CartBtn
+          onClick={() => {
+            setCart(cart.filter(el => el.id !== id))
+          }}
+        >Remove From cart</CartBtn>
+      ) : (
+        <CartBtn onClick={() => {
+          setCart([...cart, product])
+        }}>Add To Cart</CartBtn>
+      )}
+    </Card>
+
   )
 }
 

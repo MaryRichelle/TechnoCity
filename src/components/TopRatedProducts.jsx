@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Product from './Product';
 
 const Container = styled.section`
+width:100%;
 display:flex;
 flex-direction: column;
 align-items: center;
@@ -43,6 +44,8 @@ const Heading = styled.h2`
   display: flex;
   justify-content: center;
   align-items:center;
+  color : var(--hover-color-tomato);
+
   `
 const TopRatedHeading = styled.p`
   text-align: center;
@@ -78,6 +81,7 @@ const TopRatedProducts = ({ length, heading, description }) => {
 
   return (
     <Container>
+      <Hr />
       <div>
         <Heading > {heading} </Heading>
         <TopRatedHeading>
@@ -93,6 +97,7 @@ const TopRatedProducts = ({ length, heading, description }) => {
 
         </ AllProducts>
         <Button onClick={handleClick}>View All &gt;&gt;&gt;</Button>
+
       </ContainerInner>
     </Container>
   );
