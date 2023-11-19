@@ -57,6 +57,7 @@ ${media.mobileSm(css`
 width:auto;
  font-size: 1rem;
  `)}
+
 `
 const SearchContainer = styled.div`
 width:60%;
@@ -67,7 +68,9 @@ border-radius: 4px;
 border: 1px solid #fff;
 align-items: center;
 position:relative;
-
+ ${media.mobileSm(css`
+display:none;
+ `)}
 `
 const SearchInput = styled.input`
 flex-grow:1;
