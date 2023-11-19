@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { CartContext } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
-const Card = styled.div`
+
+const Card = styled.section`
 border-radius:.4em;
 border: 1px solid var(--light-gray);
 display:flex;
@@ -13,7 +14,14 @@ gap:2rem;
 font-size:1em;
 background:#fff;
 cursor:pointer;
-
+`
+const ProductWrapper = styled.div`
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+gap:2rem;
+font-size:1em;
 `
 const Description = styled.article`
 display: flex;
@@ -48,16 +56,19 @@ background: var(--hover-color-tomato);
 color: #fff}
 `
 function Product({ product }) {
+  const navigate = useNavigate()
   const { cart, setCart } = useContext(CartContext)
   const { title, price, image, id } = product;
-  const navigate = useNavigate()
+  
   function handleClickProduct(id) {
+    
     navigate(`/product/${id}`);
 
   }
   return (
 
-    <Card onClick={() => handleClickProduct(id)}>
+    <Card >
+      <ProductWrapper onClick={() => handleClickProduct(id)}>
       <Images src={image} alt={title} />
       <Description >
         <p> {title}</p>
@@ -65,6 +76,7 @@ function Product({ product }) {
           {price.slice(1, 4)}
         </p>
       </Description>
+      </ProductWrapper>
       {cart.includes(product) ? (
         <CartBtn
           onClick={() => {

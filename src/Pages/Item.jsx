@@ -91,7 +91,7 @@ const Item = () => {
     id &&
     < Main>
       <Container>
-        <ZoomImageWrapper onMouseMove={handleZoomToggle}>
+          <ZoomImageWrapper onMouseOver={handleZoomToggle}>
           <Image src={item.image} alt={item.title} isZoomed={isZoomed}
           />
         </ZoomImageWrapper>

@@ -51,7 +51,7 @@ function BottomCarousel() {
   useEffect(() => {
     const intervalSet = setInterval(nextImage, 5000)
     return () => clearInterval(intervalSet)
-  }, [currentImage])
+  }, [currentImage, nextImage])
   return (
     <Container>
       {
