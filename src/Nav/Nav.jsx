@@ -54,13 +54,16 @@ transition: transform 0.3s ease-in-out;
 
 `
 
+const   Li = styled.li`
+list-style:none;
+
+`
 const StyledLink = styled(Link)`
 text-decoration: none;
 font-size:.9rem;
 color:#fbfbfc ;
 &:active{
   background: white;
-  transform: skewX( -25deg);
 }
   &:hover {
   color: var(--hover-color-tomato);
@@ -102,11 +105,21 @@ function Nav() {
         {offer}
       </OffersText>
       <LinksContainer open={open}>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/smartphones">Smart Phones</StyledLink>
-        <StyledLink to="/smartwatches">Smart watches</StyledLink>
-        <StyledLink to="/laptops">PC and Laptops</StyledLink>
-        <StyledLink to="/home-appliances">Home Appliances</StyledLink>
+        <Li>
+          <StyledLink to="/">Home</StyledLink>
+        </Li>
+        <Li>
+          <StyledLink to="/smartphones">Smart Phones</StyledLink>
+        </Li>
+        <Li>
+          <StyledLink to="/smartwatches">Smart watches</StyledLink>
+        </Li>
+        <Li>
+          <StyledLink to="/laptops">PC and Laptops</StyledLink>
+        </Li>
+        <Li>
+          <StyledLink to="/home-appliances">Home Appliances</StyledLink>
+        </Li>
       </LinksContainer>
       <HamburgerIcon open={open} onClick={() => setOpen(!open)} />
     </NavBar>
