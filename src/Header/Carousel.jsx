@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/MediaQueries';
 
 const Container = styled.section`
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: baseline;
@@ -118,7 +118,7 @@ function Carousel() {
   useEffect(() => {
     const intervalSet = setInterval(handleNextClick, 5000)
     return () => clearInterval(intervalSet)
-  }, [currentImage])
+  }, [currentImage, handleNextClick])
 
   const handleClick = () => {
     navigate("/shop")

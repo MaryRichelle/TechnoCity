@@ -4,7 +4,7 @@ import { bottomCarouselImages as images } from "../data/carousel_images"
 import { media } from '../styles/MediaQueries';
 
 const Container = styled.section`
-    width: 100vw;
+    width: 100%;
     margin:auto;
     display: flex;
     justify-content: center;
@@ -51,7 +51,7 @@ function BottomCarousel() {
   useEffect(() => {
     const intervalSet = setInterval(nextImage, 5000)
     return () => clearInterval(intervalSet)
-  }, [currentImage])
+  }, [currentImage, nextImage])
   return (
     <Container>
       {

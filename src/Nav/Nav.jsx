@@ -6,14 +6,13 @@ import { OfferTextKeyframes } from "../styles/Keyframes";
 import { media } from '../styles/MediaQueries';
 import { GiHamburgerMenu } from "react-icons/gi"
 
-const NavBar = styled.div`
-width:100vw;
+const NavBar = styled.nav`
+width:100%;
  background:#232222; 
 color:var(--light-gray) ;
 display: flex;
 flex-direction:column;
 justify-content: space-around ;
-align-items:center;
 padding-inline: 5rem;
 height:5rem;
 position:sticky;
@@ -25,7 +24,6 @@ justify-content: space-between ;
   `)}
 `
 const LinksContainer = styled.ul`
-align-self: self-end;
 display: flex;
 justify-content: space-around;
 align-items:center;
@@ -46,7 +44,7 @@ height: 50vh;
 width: 300px;
  background:#232222; 
 z-index:6;
-transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+transform: ${({ open }) => open ? 'translateX(0%)' : 'translateX(100%)'};
 padding-top: 3.5rem;
 transition: transform 0.3s ease-in-out;
  `)}
@@ -78,10 +76,13 @@ padding:.5rem 1.5rem;  `)}
 
 `
 const OffersText = styled.p`
-width: auto;
-animation:${OfferTextKeyframes} 10s linear 0s infinite;
+width:max-content;
+animation:${OfferTextKeyframes} 5s linear 0s infinite;
 ${media.tablet(css`
-font-size:15px; `)}
+font-size:12px;
+animation:none;
+
+`)}
 `
 const HamburgerIcon = styled(GiHamburgerMenu)`
 display:none;

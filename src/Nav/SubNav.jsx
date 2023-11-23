@@ -10,7 +10,7 @@ import { useSearch } from '../context/SearchProvider'
 import SearchResult from "./SearchResult"
 
 const NavBar = styled.div`
-width:100vw;
+width:100%;
 background: var(--dark-gray);
 color:#fff ;
 display: flex;
@@ -68,9 +68,9 @@ border-radius: 4px;
 border: 1px solid #fff;
 align-items: center;
 position:relative;
- ${media.mobileSm(css`
-display:none;
- `)}
+//  ${media.mobileSm(css`
+// display:none;
+//  `)}
 `
 const SearchInput = styled.input`
 flex-grow:1;

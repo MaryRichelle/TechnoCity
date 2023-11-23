@@ -5,7 +5,7 @@ import Bottom from './Bottom'
 import Middle from "./Middle"
 
 const StyledFooter = styled.footer`
-width:100vw;
+width:100%;
 background:#232222;  
 color: var(--light-gray);
 `;

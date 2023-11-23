@@ -5,7 +5,7 @@ import TopRatedProducts from "../../components/TopRatedProducts"
 import Categories from './Categories';
 import BottomCarousel from "../../components/BottomCarousel"
 const Main = styled.main`
-  width: 100vw;
+  width: 100%;
   margin:auto;
   `
 
