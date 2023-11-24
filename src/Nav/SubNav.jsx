@@ -14,7 +14,8 @@ width:100%;
 background: var(--dark-gray);
 color:#fff ;
 display: flex;
-justify-content: space-between;
+ justify-content: space-between;
+
 align-items:center;
 padding-inline: 10%;
 height:4rem;
@@ -23,6 +24,11 @@ top:5rem;
 z-index:1;
  ${media.tablet(css`
  padding-inline: 0;
+
+ `)}
+ ${media.mobile(css`
+justify-content: center;
+
  `)}
 `
 
@@ -48,9 +54,8 @@ ${media.mobile(css`
 `
 
 const RightSide = styled.div`
-width:60%;
 display: flex;
-justify-content:flex-end;
+justify-content:flex-start;
 align-items:center;
 gap:5px;
 ${media.mobileSm(css`
@@ -60,7 +65,7 @@ width:auto;
 
 `
 const SearchContainer = styled.div`
-width:60%;
+flex-basis:60%:
 background: inherit;
 display: flex;
 justify-content:space-between;
@@ -70,6 +75,8 @@ align-items: center;
 position:relative;
  ${media.mobileSm(css`
 width:40%;
+justify-content:flex-start;
+
  `)}
 `
 const SearchInput = styled.input`
@@ -87,10 +94,16 @@ outline: none;
 `
 const SearchIcon = styled(FaSearch)`
 margin-inline:4px;
+font-size:1.5rem;
 cursor:pointer;
 &:hover{
 color: var(--hover-color-tomato);
 }
+ ${media.mobileSm(css`
+ font-size:0.5rem;
+
+ `
+)}
 `
 const ShoppingCartSpan = styled.span`
 display: inline-block;
