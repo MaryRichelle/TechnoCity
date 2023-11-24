@@ -68,9 +68,9 @@ border-radius: 4px;
 border: 1px solid #fff;
 align-items: center;
 position:relative;
-//  ${media.mobileSm(css`
-// display:none;
-//  `)}
+ ${media.mobileSm(css`
+width:40%;
+ `)}
 `
 const SearchInput = styled.input`
 flex-grow:1;
