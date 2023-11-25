@@ -142,6 +142,13 @@ transform: translateY(25px);
 
  `)}
 `
+
+const Avatar = styled(RxAvatar)`
+ ${media.mobile(css`
+ display:none;
+ `)}
+
+`
 function SubNav() {
   const { cart } = useContext(CartContext);
   const { dispatch } = useSearch();
@@ -174,7 +181,7 @@ function SubNav() {
 
           </SearchContainer>
 
-          <RxAvatar size={30} />
+          <Avatar size={30} />
           <StyledLink to="/cart">
             <CartIcon size={30} />
             <ShoppingCartSpan>
