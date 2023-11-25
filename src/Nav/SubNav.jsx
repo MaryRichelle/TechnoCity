@@ -14,8 +14,7 @@ width:100%;
 background: var(--dark-gray);
 color:#fff ;
 display: flex;
- justify-content: space-between;
-
+justify-content: space-between;
 align-items:center;
 padding-inline: 10%;
 height:4rem;
@@ -23,10 +22,10 @@ position:sticky;
 top:5rem;
 z-index:1;
  ${media.tablet(css`
- padding-inline: 0;
+ padding-inline: 0.3rem;
 
  `)}
- ${media.mobile(css`
+ ${media.mobileXSM(css`
 justify-content: center;
 
  `)}
@@ -54,28 +53,31 @@ ${media.mobile(css`
 `
 
 const RightSide = styled.div`
+flex-basis:80%;
 display: flex;
-justify-content:flex-start;
+justify-content:flex-end;
 align-items:center;
 gap:5px;
 ${media.mobileSm(css`
 width:auto;
  font-size: 1rem;
+ gap:0px;
+
  `)}
 
 `
 const SearchContainer = styled.div`
-flex-basis:60%:
 background: inherit;
+flex-grow:0.5;
 display: flex;
 justify-content:space-between;
+align-items: center;
 border-radius: 4px;
 border: 1px solid #fff;
-align-items: center;
 position:relative;
  ${media.mobileSm(css`
-width:40%;
 justify-content:flex-start;
+flex-grow:0;
 
  `)}
 `
@@ -87,9 +89,12 @@ padding: 0.5rem;
 color: #fff;
 &:focus{
 border: none;
-outline: none;
+outline: none;}
+ ${media.mobileSm(css`
 
-}
+  `)}
+
+
 
 `
 const SearchIcon = styled(FaSearch)`
@@ -100,7 +105,8 @@ cursor:pointer;
 color: var(--hover-color-tomato);
 }
  ${media.mobileSm(css`
- font-size:0.5rem;
+ font-size:1rem;
+margin-inline:0px;
 
  `
 )}
@@ -115,10 +121,27 @@ width: 25px;
 height:25px;
 text-align:center;
 transform: translateY(-25px);
-${media.mobile(css`
-transform: translate(-15px,-20px);
+ ${media.tablet(css`
+transform: translate(-10px, -20px);
+
+ `)}
+ ${media.mobile(css`
+transform: translate(18px, -50px);
+
  `)}
 `;
+
+const CartIcon = styled(FaShoppingCart)`
+
+ ${media.tablet(css`
+transform: translateY(5px);
+
+ `)}
+ ${media.mobile(css`
+transform: translateY(25px);
+
+ `)}
+`
 function SubNav() {
   const { cart } = useContext(CartContext);
   const { dispatch } = useSearch();
@@ -153,7 +176,7 @@ function SubNav() {
 
           <RxAvatar size={30} />
           <StyledLink to="/cart">
-            <FaShoppingCart size={30} />
+            <CartIcon size={30} />
             <ShoppingCartSpan>
               {cart.length}
             </ShoppingCartSpan>

@@ -4,8 +4,9 @@ import { css } from 'styled-components';
 const breakpoints = {
   mobileXSM: '300px',
   mobileSm: '480px',
-  mobile: '480px',
-  tablet: '768px',
+  mobile: '490px',
+  tablet: '750px',
+  tabletSm: '920px',
   tabletLg: '900px',
   desktop: '1024px',
   desktopMd: '1100px'
