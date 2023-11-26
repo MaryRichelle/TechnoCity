@@ -59,9 +59,10 @@ justify-content:flex-end;
 align-items:center;
 gap:5px;
 ${media.mobileSm(css`
-width:auto;
- font-size: 1rem;
- gap:0px;
+  width:auto;
+  font-size: 1rem;
+  gap:0px;
+align-items:start;
 
  `)}
 
@@ -142,6 +143,12 @@ transform: translateY(25px);
 
  `)}
 `
+const Avatar = styled(RxAvatar)`
+ ${media.mobile(css`
+display:none;
+ `)}
+`
+
 function SubNav() {
   const { cart } = useContext(CartContext);
   const { dispatch } = useSearch();
@@ -154,7 +161,7 @@ function SubNav() {
   };
 
   const handleClickSearch = () => {
-    dispatch({ type: 'SET_QUERY', payload: searchQuery });
+    dispatch({ type: 'SET_QUERY', payload: searchQuery }); 
   };
 
   return (
@@ -174,7 +181,7 @@ function SubNav() {
 
           </SearchContainer>
 
-          <RxAvatar size={30} />
+          <Avatar size={30} />
           <StyledLink to="/cart">
             <CartIcon size={30} />
             <ShoppingCartSpan>
