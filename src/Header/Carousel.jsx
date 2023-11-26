@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { media } from '../styles/MediaQueries';
 
 const Container = styled.section`
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: baseline;
@@ -16,7 +16,7 @@ const Container = styled.section`
     padding-block:2rem;
     z-index:0.8;
     background: var(--dark-gray);
-   ${media.desktop(css`
+   ${media.tabletLg(css`
       flex-direction: row;
       justify-content: space-around;
       padding-block:2rem;
@@ -24,17 +24,14 @@ const Container = styled.section`
   
     `
 const CarouselImages = styled.img`
-    height: 50vh;
+    height: 30vh;
     width: 80%;
     object-fit: fit;
     &:hover{
      transform: scaleX(-1);
     transition: transform 1s ease-in-out;
     }
-    ${media.tabletLg(css`
-    width:50%;
-  `)}
-  ${media.desktop(css`
+  ${media.tabletLg(css`
     width:40%;
     height: 70vh;
   `)}
@@ -118,7 +115,7 @@ function Carousel() {
   useEffect(() => {
     const intervalSet = setInterval(handleNextClick, 5000)
     return () => clearInterval(intervalSet)
-  }, [currentImage])
+  }, [currentImage, handleNextClick])
 
   const handleClick = () => {
     navigate("/shop")

@@ -10,7 +10,7 @@ import { useSearch } from '../context/SearchProvider'
 import SearchResult from "./SearchResult"
 
 const NavBar = styled.div`
-width:100vw;
+width:100%;
 background: var(--dark-gray);
 color:#fff ;
 display: flex;
@@ -22,7 +22,12 @@ position:sticky;
 top:5rem;
 z-index:1;
  ${media.tablet(css`
- padding-inline: 0;
+ padding-inline: 0.3rem;
+
+ `)}
+ ${media.mobileXSM(css`
+justify-content: flex-start;
+
  `)}
 `
 
@@ -44,30 +49,34 @@ ${media.mobile(css`
  padding-inline: 0;
  font-size: 1rem;
  `)}
-
 `
 
 const RightSide = styled.div`
-width:60%;
+flex-basis:80%;
 display: flex;
 justify-content:flex-end;
 align-items:center;
 gap:5px;
 ${media.mobileSm(css`
-width:auto;
- font-size: 1rem;
+flex-basis:0;
+ font-size: 0.5rem;
+ gap:0px;
  `)}
+
 `
 const SearchContainer = styled.div`
-width:60%;
 background: inherit;
+flex-grow:0.5;
 display: flex;
 justify-content:space-between;
+align-items: center;
 border-radius: 4px;
 border: 1px solid #fff;
-align-items: center;
 position:relative;
-
+ ${media.mobileSm(css`
+justify-content:flex-start;
+flex-grow:0;
+ `)}
 `
 const SearchInput = styled.input`
 flex-grow:1;
@@ -77,17 +86,27 @@ padding: 0.5rem;
 color: #fff;
 &:focus{
 border: none;
-outline: none;
+outline: none;}
+ ${media.mobileSm(css`
+flex-grow:0;
+font-size:0.7rem;
+padding-inline: 0;
 
-}
-
+  `)}
 `
 const SearchIcon = styled(FaSearch)`
 margin-inline:4px;
+font-size:1.5rem;
 cursor:pointer;
 &:hover{
 color: var(--hover-color-tomato);
 }
+ ${media.mobileSm(css`
+ font-size:1rem;
+margin-inline:0px;
+
+ `
+)}
 `
 const ShoppingCartSpan = styled.span`
 display: inline-block;
@@ -99,10 +118,27 @@ width: 25px;
 height:25px;
 text-align:center;
 transform: translateY(-25px);
-${media.mobile(css`
-transform: translate(-15px,-20px);
+ ${media.tablet(css`
+transform: translate(-10px, -20px);
+ `)}
+ ${media.mobile(css`
+transform: translate(12px, -28px);
+font-size: 0.8rem;
+width: 20px;
+height:20px;
  `)}
 `;
+
+const CartIcon = styled(FaShoppingCart)`
+
+ ${media.tablet(css`
+transform: translateY(5px);
+ `)}
+ ${media.mobile(css`
+transform: translateY(25px);
+
+ `)}
+`
 function SubNav() {
   const { cart } = useContext(CartContext);
   const { dispatch } = useSearch();
@@ -137,7 +173,7 @@ function SubNav() {
 
           <RxAvatar size={30} />
           <StyledLink to="/cart">
-            <FaShoppingCart size={30} />
+            <CartIcon  />
             <ShoppingCartSpan>
               {cart.length}
             </ShoppingCartSpan>

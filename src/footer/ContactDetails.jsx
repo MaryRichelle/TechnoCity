@@ -1,9 +1,10 @@
 import React from 'react'
-import { styled } from 'styled-components'
+import { styled} from 'styled-components'
 
 
 const DetailsP = styled.p`
 font-weight: 200;
+
 `
 
 function ContactDetails({ title, detail }) {

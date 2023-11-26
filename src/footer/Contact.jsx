@@ -1,9 +1,10 @@
 import React from 'react'
-import { styled } from 'styled-components'
+import { styled,css } from 'styled-components'
 import ContactDetails from "./ContactDetails"
 import { FaPhoneAlt } from "react-icons/fa"
 import { AiOutlineMail } from "react-icons/ai"
 import { HiLocationMarker } from "react-icons/hi"
+import { media } from "../styles/MediaQueries"
 
 const ContactInfo = styled.div`
  display: flex;
@@ -18,9 +19,14 @@ display: flex;
 justify-content:space-around;
 align-items: center;
 column-gap: 2rem;
+${media.mobile(css`
+column-gap: 1rem;
+    `)}
 `
 const BorderLine = styled.hr`
-width: 100%`
+width: 90%
+
+`
 function Contact() {
   return (
     <ContactInfo>

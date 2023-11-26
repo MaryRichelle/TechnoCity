@@ -1,7 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../context/CartContext';
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
+import { media } from '../styles/MediaQueries';
+
+import { styled, css } from 'styled-components'
 import OffersText from "../components/Offers"
 import TopRatedProducts from "../components/TopRatedProducts"
 const Main = styled.main`
@@ -18,6 +20,9 @@ margin:5rem auto;
 display:flex;
 justify-content: space-around;
 align-items: center;
+ ${media.tablet(css`
+flex-direction:column;
+  `)}
 `
 const ZoomImageWrapper = styled.div`
 width:40%;
@@ -26,6 +31,10 @@ object-fit: contain;
    overflow: hidden;
   position: relative;
   cursor: pointer;
+  ${media.tablet(css`
+width:70%;
+height:60%;
+  `)}
 `;
 const Image = styled.img`
 width:100%;
@@ -47,7 +56,10 @@ flex-direction: column;
 justify-content: space-around;
 align-items:start;
 gap:3rem;
+ ${media.tablet(css`
+gap:1rem;
 
+  `)}
 `
 
 const P = styled.p`

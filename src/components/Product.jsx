@@ -80,7 +80,7 @@ function Product({ product }) {
       {cart.includes(product) ? (
         <CartBtn
           onClick={() => {
-            setCart(cart.filter(el => el.id !== id))
+            setCart(cart.filter(item => item.id !== id))
           }}
         >Remove From cart</CartBtn>
       ) : (

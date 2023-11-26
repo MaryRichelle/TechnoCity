@@ -77,7 +77,7 @@ const TopRatedProducts = ({ length, heading, description }) => {
       }
       setTopRatedItems(topRated);
     }
-  }, [products]);
+  }, [length, products]);
 
   return (
     <Container>

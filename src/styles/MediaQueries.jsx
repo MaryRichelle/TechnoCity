@@ -4,9 +4,10 @@ import { css } from 'styled-components';
 const breakpoints = {
   mobileXSM: '300px',
   mobileSm: '480px',
-  mobile: '480px',
-  tablet: '768px',
-  tabletLg: '900px',
+  mobile: '490px',
+  tablet: '750px',
+  tabletSm: '900px',
+  tabletLg: '960px',
   desktop: '1024px',
   desktopMd: '1100px'
 };
@@ -32,8 +33,13 @@ export const media = {
       ${styles}
     }
   `,
+  tabletSm: (styles) => css`
+    @media (min-width: ${breakpoints.tabletLg}) {
+      ${styles}
+    }
+  `,
   tabletLg: (styles) => css`
-    @media (max-width: ${breakpoints.tabletLg}) {
+    @media (min-width: ${breakpoints.tabletLg}) {
       ${styles}
     }
   `,

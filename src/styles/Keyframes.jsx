@@ -3,23 +3,20 @@ import { keyframes } from 'styled-components';
 
 export const OfferTextKeyframes = keyframes`
 0%{
-transform: translateX(70%)
+transform: translateX(200%)
 }
 100%{
-transform: translateX(-70%)
+transform: translateX(-100%)
 }
 
 `
-export const BottomOfferTextKeyframes = keyframes`
+export const OfferTextOnTablet = keyframes`
 0%{
-transform: translateX(70%)
+transform: translateX(50%)
 }
-
 100%{
-  transform: translateX(-70%)
-
+transform: translateX(-50%)
 }
-
 
 `
 

@@ -10,7 +10,7 @@ function OffersContext({ children }) {
     const intervalId = setInterval(() => {
       const newOffer = getRandomOffer();
       setOffer(newOffer);
-    }, 8000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, []);
