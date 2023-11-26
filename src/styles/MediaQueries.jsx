@@ -6,8 +6,8 @@ const breakpoints = {
   mobileSm: '480px',
   mobile: '490px',
   tablet: '750px',
-  tabletSm: '920px',
-  tabletLg: '900px',
+  tabletSm: '900px',
+  tabletLg: '960px',
   desktop: '1024px',
   desktopMd: '1100px'
 };
@@ -33,8 +33,13 @@ export const media = {
       ${styles}
     }
   `,
+  tabletSm: (styles) => css`
+    @media (min-width: ${breakpoints.tabletLg}) {
+      ${styles}
+    }
+  `,
   tabletLg: (styles) => css`
-    @media (max-width: ${breakpoints.tabletLg}) {
+    @media (min-width: ${breakpoints.tabletLg}) {
       ${styles}
     }
   `,

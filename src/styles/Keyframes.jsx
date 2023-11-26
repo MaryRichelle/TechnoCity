@@ -10,6 +10,15 @@ transform: translateX(-100%)
 }
 
 `
+export const OfferTextOnTablet = keyframes`
+0%{
+transform: translateX(50%)
+}
+100%{
+transform: translateX(-50%)
+}
+
+`
 
 export const FlipImages = keyframes`
   0% {

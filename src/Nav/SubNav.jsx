@@ -26,7 +26,7 @@ z-index:1;
 
  `)}
  ${media.mobileXSM(css`
-justify-content: center;
+justify-content: flex-start;
 
  `)}
 `
@@ -49,7 +49,6 @@ ${media.mobile(css`
  padding-inline: 0;
  font-size: 1rem;
  `)}
-
 `
 
 const RightSide = styled.div`
@@ -59,11 +58,9 @@ justify-content:flex-end;
 align-items:center;
 gap:5px;
 ${media.mobileSm(css`
-  width:auto;
-  font-size: 1rem;
-  gap:0px;
-align-items:start;
-
+flex-basis:0;
+ font-size: 0.5rem;
+ gap:0px;
  `)}
 
 `
@@ -79,7 +76,6 @@ position:relative;
  ${media.mobileSm(css`
 justify-content:flex-start;
 flex-grow:0;
-
  `)}
 `
 const SearchInput = styled.input`
@@ -92,11 +88,11 @@ color: #fff;
 border: none;
 outline: none;}
  ${media.mobileSm(css`
+flex-grow:0;
+font-size:0.7rem;
+padding-inline: 0;
 
   `)}
-
-
-
 `
 const SearchIcon = styled(FaSearch)`
 margin-inline:4px;
@@ -124,11 +120,12 @@ text-align:center;
 transform: translateY(-25px);
  ${media.tablet(css`
 transform: translate(-10px, -20px);
-
  `)}
  ${media.mobile(css`
-transform: translate(18px, -50px);
-
+transform: translate(12px, -28px);
+font-size: 0.8rem;
+width: 20px;
+height:20px;
  `)}
 `;
 
@@ -136,19 +133,11 @@ const CartIcon = styled(FaShoppingCart)`
 
  ${media.tablet(css`
 transform: translateY(5px);
-
  `)}
  ${media.mobile(css`
 transform: translateY(25px);
 
  `)}
-`
-
-const Avatar = styled(RxAvatar)`
- ${media.mobile(css`
- display:none;
- `)}
-
 `
 function SubNav() {
   const { cart } = useContext(CartContext);
@@ -162,7 +151,7 @@ function SubNav() {
   };
 
   const handleClickSearch = () => {
-    dispatch({ type: 'SET_QUERY', payload: searchQuery }); 
+    dispatch({ type: 'SET_QUERY', payload: searchQuery });
   };
 
   return (
@@ -182,10 +171,9 @@ function SubNav() {
 
           </SearchContainer>
 
-          <Avatar size={30} />
-          <Avatar size={30} />
+          <RxAvatar size={30} />
           <StyledLink to="/cart">
-            <CartIcon size={30} />
+            <CartIcon  />
             <ShoppingCartSpan>
               {cart.length}
             </ShoppingCartSpan>

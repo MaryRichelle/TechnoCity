@@ -3,6 +3,7 @@ import { styled, css } from 'styled-components'
 import { Link } from "react-router-dom"
 import { OffersData } from "../context/OffersContext";
 import { OfferTextKeyframes } from "../styles/Keyframes";
+import { OfferTextOnTablet } from "../styles/Keyframes";
 import { media } from '../styles/MediaQueries';
 import { GiHamburgerMenu } from "react-icons/gi"
 
@@ -81,7 +82,9 @@ animation:${OfferTextKeyframes} 5s linear 0s infinite;
 ${media.tablet(css`
 font-size:12px;
 animation:none;
-
+`)}
+${media.tabletLg(css`
+animation:${OfferTextOnTablet} 5s linear 0s infinite;
 `)}
 `
 const HamburgerIcon = styled(GiHamburgerMenu)`
