@@ -59,9 +59,10 @@ justify-content:flex-end;
 align-items:center;
 gap:5px;
 ${media.mobileSm(css`
-width:auto;
- font-size: 1rem;
- gap:0px;
+  width:auto;
+  font-size: 1rem;
+  gap:0px;
+align-items:start;
 
  `)}
 
@@ -161,7 +162,7 @@ function SubNav() {
   };
 
   const handleClickSearch = () => {
-    dispatch({ type: 'SET_QUERY', payload: searchQuery });
+    dispatch({ type: 'SET_QUERY', payload: searchQuery }); 
   };
 
   return (
@@ -181,6 +182,7 @@ function SubNav() {
 
           </SearchContainer>
 
+          <Avatar size={30} />
           <Avatar size={30} />
           <StyledLink to="/cart">
             <CartIcon size={30} />
