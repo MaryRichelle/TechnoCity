@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { styled } from 'styled-components'
+import { styled, css } from 'styled-components';
+import { media } from '../styles/MediaQueries';
 import Product from "../components/Product"
 import { CartContext } from '../context/CartContext';
 
@@ -20,14 +21,19 @@ const MyCart = styled.article`
 width:100%;
 display:flex;
 gap:2rem;
+flex-direction: column;
 justify-content:space-between;
 align-items:center;
 padding-block:2rem;
+${media.tablet(css`
+background:red;
+  `)}
 `
 const ProductsContainer = styled.section`
-flex-grow:1;
+flex-basis:auto;
+width:100%;
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(220px, 0.4fr));
+grid-template-columns: repeat(auto-fill, minmax(200px, 0.4fr));
 gap: 4rem;
 margin: auto;
 `
