@@ -30,7 +30,6 @@ const AllProducts = styled.div`
   margin:auto;
   padding:2rem;
   width: 100%;
-border:1px solid red;
 `
 const Button = styled.span`
 color : var(--hover-color-tomato);

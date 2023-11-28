@@ -80,13 +80,13 @@ padding:.5rem 1.5rem;  `)}
 `
 const OffersText = styled.p`
 width:max-content;
-animation:${OfferTextKeyframes} 5s linear 0s infinite;
+animation:${OfferTextOnTablet} 5s linear 0s infinite;
 ${media.tablet(css`
 font-size:12px;
 animation:none;
 `)}
 ${media.tabletLg(css`
-animation:${OfferTextOnTablet} 5s linear 0s infinite;
+animation: ${OfferTextKeyframes} 5s linear 0s infinite;
 `)}
 `
 const HamburgerIcon = styled(GiHamburgerMenu)`
