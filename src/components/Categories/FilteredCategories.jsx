@@ -6,24 +6,28 @@ import Offers from "../Offers"
 import TopRatedProducts from "../../components/TopRatedProducts"
 
 const Container = styled.section`
-width: 85%;
+width: 80%;
 margin:auto;
 padding-block:6rem;
 display:flex;
 gap: 3rem;
 flex-direction: column;
 justify-content: space-around;
-align-item:center;
+align-items:center;
+
  `
 
 const AllProducts = styled.section`
-display:grid;
-grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-gap:4rem;
-width: 100%;
-margin:auto;
+ display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 0.4fr));
+  justify-content:center;
+  align:items:center;
+  gap:4rem;
+  margin:auto;
+  width: 100%;
+
 `
-const H1 = styled.h1`
+const H2 = styled.h2`
 text-align: center;
 font-size: 2.5rem;
 font-weight: 1000;
@@ -32,7 +36,7 @@ function FilteredCategories({ category, title }) {
   const { filteredProducts } = useProductFilter(category)
   return (
     <Container >
-      <H1>{title}</H1>
+      <H2>{title}</H2>
       <AllProducts>
         {
           filteredProducts && filteredProducts.map(product => {

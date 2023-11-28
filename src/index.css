@@ -8,11 +8,9 @@
   --hover-color-tomato: rgb(255, 99, 71);
   --dark-gray: rgba(174, 173, 173);
   --light-gray: rgb(212, 211, 211);
+  --black-dark: rgb(36, 36, 36);
 }
 
 html {
   width: 100vw;
 }
-/* body {
-  width: 100%;
-} */

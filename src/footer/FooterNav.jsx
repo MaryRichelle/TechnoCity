@@ -26,6 +26,11 @@ text-decoration: none;
 font-size:1rem;
 padding: 1rem;
 color:var(--light-gray) ;
+transition: all 3s ease-out;
+padding-block-end:2px;
+&:active{
+  border-block-end: 2px solid white;
+}
  &:hover {
   color: var(--hover-color-tomato);
 }

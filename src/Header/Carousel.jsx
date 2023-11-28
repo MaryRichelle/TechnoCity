@@ -26,7 +26,7 @@ const Container = styled.section`
 const CarouselImages = styled.img`
     height: 30vh;
     width: 80%;
-    object-fit: fit;
+    object-fit: contain;
     &:hover{
      transform: scaleX(-1);
     transition: transform 1s ease-in-out;

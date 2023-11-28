@@ -9,7 +9,7 @@ import { GiHamburgerMenu } from "react-icons/gi"
 
 const NavBar = styled.nav`
 width:100%;
- background:#232222; 
+background:var(--black-dark); 
 color:var(--light-gray) ;
 display: flex;
 flex-direction:column;
@@ -43,7 +43,7 @@ top: 0;
 right: 0;
 height: 50vh;
 width: 300px;
- background:#232222; 
+ background:var(--black-dark); 
 z-index:6;
 transform: ${({ open }) => open ? 'translateX(0%)' : 'translateX(100%)'};
 padding-top: 3.5rem;
@@ -61,8 +61,10 @@ const StyledLink = styled(Link)`
 text-decoration: none;
 font-size:.9rem;
 color:#fbfbfc ;
+transition: all 3s ease-out;
+padding-block-end:2px;
 &:active{
-  background: white;
+  border-block-end: 2px solid white;
 }
   &:hover {
   color: var(--hover-color-tomato);

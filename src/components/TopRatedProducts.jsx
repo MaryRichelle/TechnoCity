@@ -24,12 +24,13 @@ const ContainerInner = styled.div`
 
 const AllProducts = styled.div`
   display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 0.4fr));
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 0.4fr));
+  justify-content:center;
   gap:4rem;
   margin:auto;
   padding:2rem;
   width: 100%;
-
+border:1px solid red;
 `
 const Button = styled.span`
 color : var(--hover-color-tomato);
