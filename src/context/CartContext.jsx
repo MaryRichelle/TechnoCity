@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react'
 import axios from 'axios';
 const apiKey = process.env.REACT_APP_API_KEY;
-const URL = process.env.REACT_APP_API_URL
+const URL = "https://cartify.p.rapidapi.com/products";
 export const CartContext = createContext()
 function ProductsContext({ children }) {
   const [products, setProducts] = useState([]);
